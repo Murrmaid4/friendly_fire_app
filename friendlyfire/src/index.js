@@ -15,3 +15,6 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+
+// This page renders the pages for the user to see. Right now the app file is what's shown to users when they load this application.
