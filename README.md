@@ -6,13 +6,13 @@ To use:
 
 Git clone to your machine (in terminal in VSCode, use git clone and then copy the link from github and it will download the repo to your desktop)
 
-if already cloned to machine, make sure to git pull on the main branch before making any changes
+if already cloned to machine, make sure to git pull in your branch (git pull origin main) before making any changes 
 
 To create a new branch, use git checkout -b < nameofbranch > in terminal
 
 git switch main will bring you back to the main branch (git switch nameofbranch will take you to other branches)
 
-Once changes are made, merge the changes to the main branch 
+Once changes are made, merge the changes to the main branch (all you have to do is switch back to the main branch and it should merge the changes, then you just add and commit as normal)
 
 Any questions? Send me(Brandi) a message! 
 
