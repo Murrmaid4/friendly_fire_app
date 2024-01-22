@@ -1,4 +1,3 @@
-// this page should include......
 
 
 // ....the friendlyfire logo
