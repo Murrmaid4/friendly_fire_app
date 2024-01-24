@@ -1,3 +1,15 @@
+/* Variables */
+
+:root {
+  --white: #F4F4F4;
+  --black: #0B0326;
+  --purple: #6626A6;
+  --darBlue: #39B2BF;
+  --liBlue: #1DF2DD;
+  --pink: #F20C8B;
+  --gradient: linear-gradient(to right, #F20C8B, #39B2BF);
+}
+
 .App {
   text-align: center;
 }
