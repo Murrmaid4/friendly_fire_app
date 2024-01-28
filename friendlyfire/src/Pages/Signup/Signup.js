@@ -18,8 +18,7 @@ const Signup = () => {
     setConfirmPassword(e.target.value);
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  
 
     return (
       <div>
@@ -27,7 +26,7 @@ const Signup = () => {
         <div>{/* div for logo */}</div>
 
         <div>
-          <form onSubmit={handleSubmit}>
+          <form >
             <label>
               Email:
               <input
@@ -58,7 +57,7 @@ const Signup = () => {
               />
             </label>
             <br />
-            <button type="submit">Sign Up</button>
+            <button type="submit" >Sign Up</button>
           </form>
         </div>
 
@@ -71,7 +70,7 @@ const Signup = () => {
       </div>
     );
   };
-}
+
 
 export default Signup
 
