@@ -1,39 +1,38 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
 
 
 const Signup = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [password, setPassword] = useState("");
+  // const [confirmPassword, setConfirmPassword] = useState("");
 
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value);
-  };
+  // const handleEmailChange = (e) => {
+  //   setEmail(e.target.value);
+  // };
 
-  const handlePasswordChange = (e) => {
-    setPassword(e.target.value);
-  };
+  // const handlePasswordChange = (e) => {
+  //   setPassword(e.target.value);
+  // };
 
-  const handleConfirmPasswordChange = (e) => {
-    setConfirmPassword(e.target.value);
-  };
+  // const handleConfirmPasswordChange = (e) => {
+  //   setConfirmPassword(e.target.value);
+  // };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();}
 
     return (
       <div>
-        
         <div>{/* div for logo */}</div>
 
         <div>
-          <form onSubmit={handleSubmit}>
+          <form >
             <label>
               Email:
               <input
                 type="email"
-                value={email}
-                onChange={handleEmailChange}
+                // value={email}
+                // onChange={handleEmailChange}
                 required
               />
             </label>
@@ -42,8 +41,8 @@ const Signup = () => {
               Password:
               <input
                 type="password"
-                value={password}
-                onChange={handlePasswordChange}
+                // value={password}
+                // onChange={handlePasswordChange}
                 required
               />
             </label>
@@ -52,8 +51,8 @@ const Signup = () => {
               Confirm Password:
               <input
                 type="password"
-                value={confirmPassword}
-                onChange={handleConfirmPasswordChange}
+                // value={confirmPassword}
+                // onChange={handleConfirmPasswordChange}
                 required
               />
             </label>
@@ -71,7 +70,7 @@ const Signup = () => {
       </div>
     );
   };
-}
+
 
 export default Signup
 
