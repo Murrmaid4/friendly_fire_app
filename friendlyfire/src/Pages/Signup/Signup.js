@@ -1,4 +1,5 @@
-// import React, { useState } from "react";
+import React from "react";
+import Logo from '../../assets/StackedLogo.svg';
 
 
 const Signup = () => {
@@ -23,7 +24,10 @@ const Signup = () => {
 
     return (
       <div>
-        <div>{/* div for logo */}</div>
+        <h1>Sign Up</h1>
+        <div>{/* div for logo */}
+        <img src={Logo} alt="friendlyfire app logo"/>
+        </div>
 
         <div>
           <form >
@@ -31,7 +35,7 @@ const Signup = () => {
               Email:
               <input
                 type="email"
-                // value={email}
+                //value={email}
                 // onChange={handleEmailChange}
                 required
               />
@@ -62,7 +66,8 @@ const Signup = () => {
         </div>
 
       <div>
-        {/* Or divider div */}
+        {/* Or divider div (check figma, may be able to export css from there for this) */}
+        <p>or</p>
       </div>
 {/* this is the button that will be connecting to  */}
       <button type="submit"> Sign up with Google</button>
