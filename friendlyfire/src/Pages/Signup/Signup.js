@@ -1,29 +1,33 @@
-import React, { useState } from "react";
+import React from "react";
+import Logo from '../../assets/StackedLogo.svg';
 
 
 const Signup = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [password, setPassword] = useState("");
+  // const [confirmPassword, setConfirmPassword] = useState("");
 
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value);
-  };
+  // const handleEmailChange = (e) => {
+  //   setEmail(e.target.value);
+  // };
 
-  const handlePasswordChange = (e) => {
-    setPassword(e.target.value);
-  };
+  // const handlePasswordChange = (e) => {
+  //   setPassword(e.target.value);
+  // };
 
-  const handleConfirmPasswordChange = (e) => {
-    setConfirmPassword(e.target.value);
-  };
+  // const handleConfirmPasswordChange = (e) => {
+  //   setConfirmPassword(e.target.value);
+  // };
 
-  
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();}
 
     return (
       <div>
-        
-        <div>{/* div for logo */}</div>
+        <h1>Sign Up</h1>
+        <div>{/* div for logo */}
+        <img src={Logo} alt="friendlyfire app logo"/>
+        </div>
 
         <div>
           <form >
@@ -31,8 +35,8 @@ const Signup = () => {
               Email:
               <input
                 type="email"
-                value={email}
-                onChange={handleEmailChange}
+                //value={email}
+                // onChange={handleEmailChange}
                 required
               />
             </label>
@@ -41,8 +45,8 @@ const Signup = () => {
               Password:
               <input
                 type="password"
-                value={password}
-                onChange={handlePasswordChange}
+                // value={password}
+                // onChange={handlePasswordChange}
                 required
               />
             </label>
@@ -51,8 +55,8 @@ const Signup = () => {
               Confirm Password:
               <input
                 type="password"
-                value={confirmPassword}
-                onChange={handleConfirmPasswordChange}
+                // value={confirmPassword}
+                // onChange={handleConfirmPasswordChange}
                 required
               />
             </label>
@@ -62,7 +66,8 @@ const Signup = () => {
         </div>
 
       <div>
-        {/* Or divider div */}
+        {/* Or divider div (check figma, may be able to export css from there for this) */}
+        <p>or</p>
       </div>
 {/* this is the button that will be connecting to  */}
       <button type="submit"> Sign up with Google</button>
