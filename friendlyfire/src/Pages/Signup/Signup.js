@@ -69,8 +69,12 @@ const Signup = () => {
         {/* Or divider div (check figma, may be able to export css from there for this) */}
         <p>or</p>
       </div>
-{/* this is the button that will be connecting to  */}
+{/* this is the button that will be connecting to google api, just css on button for now */}
       <button type="submit"> Sign up with Google</button>
+      <div>
+    <a href="github.com/murrmaid4">Already a Member?</a></div>
+    {/* will have this link to login page eventually(in back end phase) */}
+   
 
       </div>
     );
@@ -80,11 +84,3 @@ const Signup = () => {
 export default Signup
 
 
-
-
-
-//... a sign up button (will be linked to registration page)
-
-//the divider with or in the middle
-
-// Sign up with google button (just css on it for now, will attach it to google later)

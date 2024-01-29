@@ -1,6 +1,5 @@
-// this page should include......
-
 import React, { useState } from 'react';
+import Logo from '../../assets/StackedLogo.svg';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -19,8 +18,7 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Add your form submission logic here
-    // For example, you can validate the input fields, check if the passwords match, and then submit the form data
+
 
     console.log('Email:', email);
     console.log('Password:', password);
@@ -34,7 +32,10 @@ const Login = () => {
 
   return (
     <div>
- <div>{/* div for logo */}</div>
+ <h1>Login</h1>
+        <div>{/* div for logo */}
+        <img src={Logo} alt="friendlyfire app logo"/>
+        </div>
 
         
     <form onSubmit={handleSubmit}>
@@ -52,11 +53,14 @@ const Login = () => {
       <button type="submit">Login</button>
     </form>
     <div>
-        {/* Or divider div */}
+        {/* Or divider div (check figma, may be able to export css from there for this) */}
+        <p>or</p>
       </div>
 {/* this is the button that will be connecting to  */}
       <button type="submit">Login with Google</button>
-
+      <div>
+    <a href="github.com/murrmaid4">New to FriendlyFire?</a></div>
+    {/* will have this link to sign in page eventually(in back end phase) */}
     </div>
   );
 };
@@ -64,11 +68,7 @@ const Login = () => {
 export default Login;
 
 
-// ....the friendlyfire logo
 
-
-
-// ....email and password input fields
 
 
 
