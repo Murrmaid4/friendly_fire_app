@@ -1,0 +1,25 @@
+body {
+    background: var(--black);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+h1 {
+    color: var(--white);
+    font-family: OnestExtraBold;
+}
+
+label {
+    color: grey;
+}
+
+#login {
+    background: var(--gradient);
+    color: var(--white);
+    width: 353px;
+    height: 45px;
+    border-radius: 10px;
+    border: none;
+}

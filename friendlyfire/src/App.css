@@ -1,3 +1,29 @@
+/* Fonts */
+@font-face {
+  font-family: OnestExtraBold;
+  src: url(./assets/fonts/Onest-ExtraBold.ttf);
+}
+
+@font-face {
+  font-family: OnestSemiBold;
+  src: url(./assets/fonts/Onest-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: OnestMedium;
+  src: url(./assets/fonts/Onest-Medium.ttf);
+}
+
+@font-face {
+  font-family: OnestRegular;
+  src: url(./assets/fonts/Onest-Regular.ttf);
+}
+
+@font-face {
+  font-family: OnestLight;
+  src: url(./assets/fonts/Onest-Light.ttf);
+}
+
 /* Variables */
 
 :root {
