@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import Logo from "../../assets/StackedLogo.svg";
+import Logo from "../../assets/loginlogo.svg";
+import Google from "../../assets/googlelogo.svg";
 import "./Login.css";
 
 const Login = () => {
@@ -27,8 +28,7 @@ const Login = () => {
 
   return (
     <div>
-      <h1>Login</h1>
-      <div>
+      <div className="logo-container">
         {/* div for logo */}
         <img src={Logo} alt="friendlyfire app logo" className="logo" />
       </div>
@@ -55,7 +55,7 @@ const Login = () => {
         </label>
         <br />
 
-        <button id="login" type="submit">
+        <button id="login" type="submit" className="login-text">
           Login
         </button>
       </form>
@@ -64,7 +64,10 @@ const Login = () => {
         <p className="or">or</p>
       </div>
       {/* this is the button that will be connecting to  */}
-      <button type="submit" className="google">Login with Google</button>
+      <div className="google-container">
+        <button type="submit" className="google">Login with Google</button>
+        {/*<img src={Google} alt="google logo" className="google-logo" />*/}
+      </div>
       <div className="account-question">
         <p className="question">Don't have an account?</p>
         <a href="github.com/murrmaid4" className="signup">Sign up</a>
