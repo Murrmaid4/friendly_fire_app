@@ -30,7 +30,7 @@ const Login = () => {
       <h1>Login</h1>
       <div>
         {/* div for logo */}
-        <img src={Logo} alt="friendlyfire app logo" />
+        <img src={Logo} alt="friendlyfire app logo" className="logo" />
       </div>
 
       <form onSubmit={handleSubmit}>
@@ -61,12 +61,13 @@ const Login = () => {
       </form>
       <div>
         {/* Or divider div (check figma, may be able to export css from there for this) */}
-        <p>or</p>
+        <p className="or">or</p>
       </div>
       {/* this is the button that will be connecting to  */}
-      <button type="submit">Login with Google</button>
-      <div>
-        <a href="github.com/murrmaid4">New to FriendlyFire?</a>
+      <button type="submit" className="google">Login with Google</button>
+      <div className="account-question">
+        <p className="question">Don't have an account?</p>
+        <a href="github.com/murrmaid4" className="signup">Sign up</a>
       </div>
       {/* will have this link to sign in page eventually(in back end phase) */}
     </div>
