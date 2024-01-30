@@ -1,0 +1,35 @@
+
+.menu-header {
+    color: white;
+    font-family: OnestExtraBold;
+    font-size: 13pt;
+    text-align: left;
+  }
+  body{
+    text-align: center;
+    color: var(--white);
+    font-family: OnestSemibold;
+    font-size: 25px;
+  }
+  .menu-items {
+    margin-left: 25px;
+    font-size: 15px;
+    color: var(--white);
+    font-family: OnestSemiBold;
+    text-align: left;
+  }
+
+  .menu-items p  {
+    font-size: 10px;
+    margin-top: 0;
+    text-align: left;
+    
+  }
+
+  hr {
+    border-width: 0.2px; 
+    border-color: var(--white);
+    margin: 10px auto; 
+    width: 100%;
+  
+  }
