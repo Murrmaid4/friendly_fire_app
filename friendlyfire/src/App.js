@@ -1,14 +1,14 @@
 import "./App.css";
 import { BrowserRouter as Router } from "react-router-dom";
 import React, { useState } from "react";
-import Signup from './Pages/Signup/Signup';
-//import Login from "./Pages/Login/Login";
+//import Signup from './Pages/Signup/Signup';
+import Login from "./Pages/Login/Login";
 
 function App() {
   return (
     <Router>
-      <Signup/>
-      {/*<Login />*/}
+      {/*<Signup/>*/}
+      <Login />
     </Router>
   );
 }
