@@ -44,7 +44,7 @@ input:focus {
 #signup {
   background: var(--gradient);
   color: var(--white);
-  width: 353px;
+  width: 355px;
   height: 45px;
   border-radius: 12px;
   border: none;
