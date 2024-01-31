@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import "./Registration.css";
 
 
 
@@ -204,6 +205,7 @@ const RegistrationPage = () => {
                                 <label>What is your preferred name?</label>
                                 <input
                                     type="text"
+                                    placeholder='Enter your First Name or Nickname'
                                     value={userData.preferredName}
                                     onChange={(e) => handleInputChange('preferredName', e.target.value)}
                                 />

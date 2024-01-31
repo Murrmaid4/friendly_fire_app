@@ -1,0 +1,75 @@
+body {
+  background: var(--black);
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+h1{
+  color: var(--Wild-Sand, #F4F4F4);
+  text-align: center;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 14px; /* 70% */
+}
+
+label {
+  color: var(--Wild-Sand, #F4F4F4);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%; /* 26px */
+}
+
+input {
+  display: flex;
+  width: 353px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 12px;
+  border: 2px solid var(--black-rock-overlay, #2C2849);
+  background: none;
+}
+
+input::placeholder{
+  color: var(--text-input, #D7D7D7);
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 18px */
+  padding-left: 10px;
+}
+
+input[type="date"]::-webkit-datetime-edit{
+  color: var(--text-input, #D7D7D7);
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 18px */
+  padding-left: 10px;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator{
+  background-color: #39B2BF;
+}
+
+button {
+  width: 353px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  border: 1px solid var(--Pelorous, #39B2BF);
+  background: #39B2BF;
+  color: #F4F4F4;
+  text-align: center;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 18px */
+  letter-spacing: 1.575px;
+  text-transform: uppercase;
+}
