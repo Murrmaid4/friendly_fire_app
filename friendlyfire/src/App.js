@@ -10,13 +10,10 @@ import Registration from "./Pages/Registration/Registration";
 function App() {
   return (
     <Router>
-<<<<<<< HEAD
       {/* <Signup/> */}
       <Registration />
-=======
       {/*<Signup/>*/}
       <Login />
->>>>>>> bdc362f141c307325964c09f3bcea88413788f96
     </Router>
   );
 }
