@@ -1,5 +1,6 @@
 import React from "react";
-import Logo from '../../assets/StackedLogo.svg';
+import Logo from '../../assets/signuplogo.svg';
+import "./Signup.css";
 
 
 const Signup = () => {
@@ -24,9 +25,10 @@ const Signup = () => {
 
     return (
       <div>
+       
+        <div className="logo-container">{/* div for logo */}
+        <img src={Logo} alt="friendlyfire app logo" className="logo"/>
         <h1>Sign Up</h1>
-        <div>{/* div for logo */}
-        <img src={Logo} alt="friendlyfire app logo"/>
         </div>
 
         <div>
@@ -61,18 +63,19 @@ const Signup = () => {
               />
             </label>
             <br />
-            <button type="submit" >Sign Up</button>
+            <button id="signup" type="submit" className="signup-text">Sign Up</button>
           </form>
         </div>
 
       <div>
         {/* Or divider div (check figma, may be able to export css from there for this) */}
-        <p>or</p>
+        <p className="or">or</p>
       </div>
 {/* this is the button that will be connecting to google api, just css on button for now */}
-      <button type="submit"> Sign up with Google</button>
-      <div>
-    <a href="github.com/murrmaid4">Already a Member?</a></div>
+      <button type="submit" className="google"> Sign up with Google</button>
+      <div className="account-question">
+        <p className="question">Already a Member?</p>
+        <a href="github.com/murrmaid4" className="login">Login</a></div>
     {/* will have this link to login page eventually(in back end phase) */}
    
 
