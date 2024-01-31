@@ -1,0 +1,145 @@
+body {
+  background: var(--black);
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.logo{
+  margin-top: 30px;
+}
+
+.logo-container{
+  text-align: center;
+}
+
+h1{
+  color: #F4F4F4;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+input {
+  display: flex;
+  width: 355px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 12px;
+  border: 1px solid var(--Grey-500, #9E9E9E);
+  background: var(--Grey-200, #f5f5f5);
+  margin-top: 4px;
+}
+
+input:focus {
+  outline: 2px solid var(--Rose, #F20C8B);
+}
+
+#signup {
+  background: var(--gradient);
+  color: var(--white);
+  width: 353px;
+  height: 45px;
+  border-radius: 12px;
+  border: none;
+}
+
+.signup-text{
+  color: #F4F4F4;
+  text-align: center;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 18px */
+  letter-spacing: 1.575px;
+  text-transform: uppercase;
+}
+
+label {
+  color: #f4f4f4;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+}
+
+.or {
+  color: #f4f4f4;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  text-align: center;
+  position: relative;
+}
+
+.or:before,
+.or:after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 156px; /* Adjust this value to control the length of the lines */
+  background: #f4f4f4;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.or:before {
+  left: 0;
+}
+
+.or:after {
+  right: 0;
+}
+
+.google {
+  display: flex;
+  width: 353px;
+  height: 54px;
+  padding: 0px 58.5px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: #FFF;
+  color: rgba(0, 0, 0, 0.54);
+  border: none;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+
+.account-question{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.question{
+  color: #f4f4f4;
+  text-align: center;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 14px;
+  letter-spacing: -0.5px;
+  margin-right: 10px;
+}
+
+.login{
+  color: var(--Bright-Turquoise, #1df2dd);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 14px;
+  letter-spacing: -0.5px;
+}

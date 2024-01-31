@@ -6,10 +6,6 @@ body {
     padding: 10px;
 }
 
-h1 {
-    color: var(--white);
-    font-family: OnestExtraBold;
-}
 
 label {
     color: #f4f4f4;
@@ -52,6 +48,10 @@ input {
     margin-top: 4px;
 }
 
+input:focus {
+    outline: 2px solid var(--Rose, #F20C8B);
+}
+
 .google {
     display: flex;
     width: 353px;
@@ -70,9 +70,13 @@ input {
     line-height: normal;
 }
 
+
 .logo{
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
+    flex-shrink: 0;
+    margin-bottom: 70px;
+    margin-top: 90px;
 }
 
 .logo-container{
