@@ -1,0 +1,28 @@
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #2C2849; /*I will add this to variables later*/
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+  }
+
+.bottom-nav a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+.bottom-nav a.active {
+    color: var(--pink);
+  }
+  
+.bottom-nav span {
+    font-size: 12px;
+    margin-top: 3px;
+  }
