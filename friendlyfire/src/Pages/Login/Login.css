@@ -6,10 +6,6 @@ body {
     padding: 10px;
 }
 
-h1 {
-    color: var(--white);
-    font-family: OnestExtraBold;
-}
 
 label {
     color: #f4f4f4;
@@ -52,6 +48,10 @@ input {
     margin-top: 4px;
 }
 
+input:focus {
+    outline: 2px solid var(--Rose, #F20C8B);
+}
+
 .google {
     display: flex;
     width: 353px;
@@ -70,10 +70,6 @@ input {
     line-height: normal;
 }
 
-.google-logo{
-    display: inline-block;
-    vertical-align: middle;
-}
 
 .logo{
     width: 250px;

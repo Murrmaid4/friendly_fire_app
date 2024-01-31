@@ -37,6 +37,10 @@ input {
   margin-top: 4px;
 }
 
+input:focus {
+  outline: 2px solid var(--Rose, #F20C8B);
+}
+
 #signup {
   background: var(--gradient);
   color: var(--white);
