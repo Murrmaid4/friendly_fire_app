@@ -66,12 +66,16 @@ const Login = () => {
       </div>
       {/* this is the button that will be connecting to  */}
       <div className="google-container">
-        <button type="submit" className="google">Login with Google</button>
+        <button type="submit" className="google">
+          Login with Google
+        </button>
         {/*<img src={Google} alt="google logo" className="google-logo" />*/}
       </div>
       <div className="account-question">
         <p className="question">Don't have an account?</p>
-        <a href="github.com/murrmaid4" className="signup">Sign up</a>
+        <a href="github.com/murrmaid4" className="signup">
+          Sign up
+        </a>
       </div>
       {/* will have this link to sign in page eventually(in back end phase) */}
     </div>
