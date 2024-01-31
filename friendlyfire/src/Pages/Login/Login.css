@@ -70,9 +70,17 @@ input {
     line-height: normal;
 }
 
+.google-logo{
+    display: inline-block;
+    vertical-align: middle;
+}
+
 .logo{
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
+    flex-shrink: 0;
+    margin-bottom: 70px;
+    margin-top: 90px;
 }
 
 .logo-container{
