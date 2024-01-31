@@ -1,16 +1,13 @@
 import "./App.css";
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import React, { useState } from "react";
-// import Signup from './pages/Signup/Signup';
+// import Signup from "./Pages/Signup/Signup";
 import Login from "./Pages/Login/Login";
-import Footer from "./Components/Footer/Footer";
 
 function App() {
   return (
     <Router>
-      {/* <Signup/> */}
       <Login />
-      <Footer />
     </Router>
   );
 }
