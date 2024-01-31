@@ -616,11 +616,15 @@ const RegistrationPage = () => {
                         </div>
                     ),
                 };
+
+        default:
+            return null; // Return null for unknown step
         };
+
     };
 
     // Define the maximum number of steps
-    const maxSteps = 10; // Update this based on the total number of steps
+    const maxSteps = 9; // Update this based on the total number of steps
 
     return <div>{renderRegistrationComponents()}</div>;
 };
