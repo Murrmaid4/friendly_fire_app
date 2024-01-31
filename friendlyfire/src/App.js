@@ -4,14 +4,19 @@ import React, { useState } from "react";
 
 // import Signup from './pages/Signup/Signup';
 // import Login from "./Pages/Login/Login";
-import Login from "./Pages/Registration/Registration";
+import Registration from "./Pages/Registration/Registration";
 
 
 function App() {
   return (
     <Router>
+<<<<<<< HEAD
+      {/* <Signup/> */}
+      <Registration />
+=======
       {/*<Signup/>*/}
       <Login />
+>>>>>>> bdc362f141c307325964c09f3bcea88413788f96
     </Router>
   );
 }
