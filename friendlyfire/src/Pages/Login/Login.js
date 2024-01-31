@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Logo from "../../assets/loginlogo.svg";
 import Google from "../../assets/googlelogo.svg";
+import background from "../../assets/background.svg";
 import "./Login.css";
 
 const Login = () => {
@@ -27,7 +28,7 @@ const Login = () => {
   };
 
   return (
-    <div>
+    <div style={{ backgroundImage: `url(${background})`, backgroundRepeat: "repeat", width: '100%'}}>
       <div className="logo-container">
         {/* div for logo */}
         <img src={Logo} alt="friendlyfire app logo" className="logo" />
