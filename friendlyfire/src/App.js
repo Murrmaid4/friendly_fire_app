@@ -3,13 +3,13 @@ import { BrowserRouter as Router } from "react-router-dom";
 import React, { useState } from "react";
 // import Signup from './pages/Signup/Signup';
 // import Login from "./Pages/Login/Login";
-import Login from "./Pages/Registration/Registration";
+import Registration from "./Pages/Registration/Registration";
 
 function App() {
   return (
     <Router>
       {/* <Signup/> */}
-      <Login />
+      <Registration />
     </Router>
   );
 }
