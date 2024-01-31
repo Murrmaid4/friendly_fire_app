@@ -2,8 +2,10 @@ import "./App.css";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import React, { useState } from "react";
 
-//import Signup from './Pages/Signup/Signup';
-import Login from "./Pages/Login/Login";
+// import Signup from './pages/Signup/Signup';
+// import Login from "./Pages/Login/Login";
+import Login from "./Pages/Registration/Registration";
+
 
 function App() {
   return (
