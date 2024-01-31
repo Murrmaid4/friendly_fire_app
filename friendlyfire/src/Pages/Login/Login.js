@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Logo from "../../assets/loginlogo.svg";
 import Google from "../../assets/googlelogo.svg";
+import background from "../../assets/background.svg";
 import "./Login.css";
 
 const Login = () => {
@@ -27,7 +28,7 @@ const Login = () => {
   };
 
   return (
-    <div>
+    <div style={{ backgroundImage: `url(${background})`, backgroundRepeat: "repeat", width: '100%'}}>
       <div className="logo-container">
         {/* div for logo */}
         <img src={Logo} alt="friendlyfire app logo" className="logo" />
@@ -65,12 +66,16 @@ const Login = () => {
       </div>
       {/* this is the button that will be connecting to  */}
       <div className="google-container">
-        <button type="submit" className="google">Login with Google</button>
+        <button type="submit" className="google">
+          Login with Google
+        </button>
         {/*<img src={Google} alt="google logo" className="google-logo" />*/}
       </div>
       <div className="account-question">
         <p className="question">Don't have an account?</p>
-        <a href="github.com/murrmaid4" className="signup">Sign up</a>
+        <a href="github.com/murrmaid4" className="signup">
+          Sign up
+        </a>
       </div>
       {/* will have this link to sign in page eventually(in back end phase) */}
     </div>
