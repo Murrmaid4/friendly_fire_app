@@ -1,7 +1,9 @@
+/* eslint-disable default-case */
 // Imports
 
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import "./Registration.css";
 
 
 
@@ -177,16 +179,17 @@ const RegistrationPage = () => {
         return (
             <div>
                 <h1>Setting Up Your Profile</h1>
+                {/* Need to include progress indicator */}
                 {/* Common structure for each step */}
                 <div>
                     <h2>{stepContent.title}</h2>
                     {stepContent.content}
                     <div>
                         {currentStep > 1 && (
-                            <button onClick={handlePrevStep}>Previous</button>
+                            <button onClick={handlePrevStep} className='previous-button'>Previous</button>
                         )}
                         {currentStep < maxSteps && (
-                            <button onClick={handleNextStep}>Next</button>
+                            <button className='next-button' onClick={handleNextStep}>Next</button>
                         )}
                     </div>
                 </div>
@@ -207,6 +210,7 @@ const RegistrationPage = () => {
                                 <label>What is your preferred name?</label>
                                 <input
                                     type="text"
+                                    placeholder='Enter your First Name or Nickname'
                                     value={userData.preferredName}
                                     onChange={(e) => handleInputChange('preferredName', e.target.value)}
                                 />
@@ -226,12 +230,12 @@ const RegistrationPage = () => {
                 };
             case 2:
                 return {
-                    title: "I Identify As:",
+                    title: "I Identify as:",
                     content: (
                         <div>
                             {/* I identify as question with rectangular buttons */}
                             <div>
-                                <div>
+                                <div className='button-container'>
                                     <button onClick={() => handleInputChange('genderIdentity', 'Woman')}>
                                         Woman
                                     </button>
@@ -265,9 +269,11 @@ const RegistrationPage = () => {
                                 )}
 
                                 {/* Prefer Not To Say option */}
-                                <button onClick={() => handleInputChange('genderIdentity', 'Prefer Not To Say')}>
-                                    Prefer Not To Say
-                                </button>
+                                <div className='button-container'>
+                                    <button onClick={() => handleInputChange('genderIdentity', 'Prefer Not To Say')}>
+                                        Prefer Not To Say
+                                    </button>
+                                </div>
                             </div>
 
                             {/* Show On Profile Toggle Switch */}
@@ -282,6 +288,7 @@ const RegistrationPage = () => {
                                     <span className="slider"></span>
                                 </label>
                             </div>
+
                         </div>
                     ),
                 };
