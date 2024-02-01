@@ -9,9 +9,7 @@ const Settings = () => {
   const [notificationsExpanded, setNotificationsExpanded] = useState(false);
   const [accessExpanded, setAccessExpanded] = useState(false);
   const [accSetExpanded, setAccSetExpanded] = useState(false);
-  //creating a search bar 
- 
-
+  
   const toggleNotifications = () => {
     setNotificationsExpanded(!notificationsExpanded);
   };
@@ -23,7 +21,7 @@ const Settings = () => {
   const toggleAccSet = () => {
     setAccSetExpanded(!accSetExpanded);
   };
-
+ 
 
   return (
     <div>
@@ -157,10 +155,9 @@ const Settings = () => {
         value='no'
       />
       )}
-          <p>Turning this on will pause your account from being <br />
-            viewed by others.
-            You will not be able to match <br /> with anyone new.
-            Existing matches will still be <br />able to view your profile.  </p>
+          <p>Turning this on will pause your account from being < br/>
+             viewed by others. You will not be able  to match  with anyone  new.
+            Existing matches will still be able to view < br/> your profile.  </p>
         </div>
         <div>Change E-mail
         </div>

@@ -2,12 +2,12 @@
 .menu-header {
   color: var(--Wild-Sand, #F4F4F4);
   font-family: OnestSemibold;
-  font-size: 17px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: 14px; /* 82.353% */
-  padding-bottom: 5%;
   padding-top: 5%;
+  padding-left: 4%;
 
   }
   /*body{
@@ -20,10 +20,15 @@
     margin-left: 25px;
     color: var(--Wild-Sand, #F4F4F4);
     font-family: Onest;
-    font-size: 17px;
+    font-size: 15px;
     font-style: normal;
     font-weight: 400;
     padding-right: 5%;
+    padding-top: 2%;
+  }
+
+  .menu-items > div{
+    margin-bottom: 2px;
   }
 
   .menu-items p  {
@@ -149,7 +154,7 @@
   }
   
   .react-toggle--checked .react-toggle-track-check {
-    opacity: 1;
+    opacity: 0;
     -webkit-transition: opacity 0.25s ease;
     -moz-transition: opacity 0.25s ease;
     transition: opacity 0.25s ease;
@@ -165,7 +170,7 @@
     margin-bottom: auto;
     line-height: 0;
     right: 10px;
-    opacity: 1;
+    opacity: 0;
     -webkit-transition: opacity 0.25s ease;
     -moz-transition: opacity 0.25s ease;
     transition: opacity 0.25s ease;
