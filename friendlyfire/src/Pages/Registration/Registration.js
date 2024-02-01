@@ -184,7 +184,7 @@ const RegistrationPage = () => {
                             <button onClick={handlePrevStep}>Previous</button>
                         )}
                         {currentStep < maxSteps && (
-                            <button onClick={handleNextStep}>Next</button>
+                            <button className='next-button' onClick={handleNextStep}>Next</button>
                         )}
                     </div>
                 </div>
