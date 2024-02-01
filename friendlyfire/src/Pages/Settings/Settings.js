@@ -3,12 +3,11 @@
 // search input can be added (but can hide if we don't get functioning in back end dev phase)
 import React, { useState } from 'react';
 import "./Settings.css";
-
+import Toggle from 'react-toggle';
 const Settings = () => {
 const [notificationsExpanded, setNotificationsExpanded] = useState(false);
 const [accessExpanded, setAccessExpanded] = useState(false);
 const [accSetExpanded, setAccSetExpanded] = useState(false);
-
 const toggleNotifications = () => {
   setNotificationsExpanded(!notificationsExpanded);
 };
@@ -22,6 +21,7 @@ const toggleAccSet = () => {
 };
 //Need to add a search input and toggle button
 //notifications
+
 return (
   <div>
   <p>Settings</p>
@@ -33,11 +33,33 @@ return (
     </div>
     {notificationsExpanded && (
       <div className="menu-items">
-        {/*<div>All notifications</div>*/}
-        <div>Notifications </div>
-        <div>Messages</div>
-        <div>New Matches</div>
-        <div>New Likes</div>
+        <div>
+        All Notifications
+        
+      <Toggle
+  defaultChecked={false}
+  value='no' />
+  </div>
+  <div>
+  Messages 
+  <Toggle
+  defaultChecked={false}
+  value='no' />
+  </div>
+
+  <div>
+  New Matches
+  <Toggle
+  defaultChecked={false}
+  value='no' />
+  </div>
+
+  <div>
+  New Likes
+  <Toggle
+  defaultChecked={false}
+  value='no' />
+  </div>
       </div>
     )}
     <hr />
@@ -50,10 +72,29 @@ return (
     </div>
     {accessExpanded && (
       <div className="menu-items">
-        <div>Light Mode</div>
-        <div>Automatically Play Video</div>
-        <div>Sync Contrast Settings</div>
-        <div>Reduce Animations</div>
+ <div>
+  Light Mode
+  <Toggle
+  defaultChecked={false}
+  value='no' />
+  </div>      
+  <div>
+  Automatically Play Video  <Toggle
+  defaultChecked={false}
+  value='no' />
+  </div>
+
+  <div>
+ Sync Contrast Settings  <Toggle
+  defaultChecked={false}
+  value='no' />
+  </div>
+
+  <div>
+ Reduce Animations  <Toggle
+  defaultChecked={false}
+  value='no' />
+  </div>
       </div>
     )}
 
@@ -66,14 +107,21 @@ return (
     </div>
     {accSetExpanded&& (
       <div className="menu-items">
-        <div>Pause Account
-          <p>Turning this on will pause your account from being  <br />
+         <div>
+         Pause Account 
+         <Toggle
+            defaultChecked={false}
+            value='no' />
+         <p>Turning this on will pause your account from being  <br />
             viewed by others.
             You will not be able to match  <br /> with anyone new. 
             Existing matches will still be  <br />able to view your profile.  </p>
+
+            </div>
+        <div>Change E-mail
         </div>
-        <div>Change E-mail</div>
-        <div>Change Password </div>
+        <div>Change Password
+         </div>
       </div>
     )}
     
