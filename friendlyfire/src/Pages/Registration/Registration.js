@@ -99,8 +99,8 @@ const RegistrationPage = () => {
         setCurrentStep(currentStep - 1);
     };
 
-    // Function to handle checkbox changes (for ethnicity and intentions)
-    const handleCheckboxChange = (fieldName, value) => {
+    // Function to handle checkbox changes for ethnicity
+    const handleEthnicityCheckboxChange = (value) => {
         const updatedEthnicity = [...userData.ethnicity];
 
         if (updatedEthnicity.includes(value)) {
@@ -115,9 +115,12 @@ const RegistrationPage = () => {
         // Update the state with the new ethnicity array
         setUserData({
             ...userData,
-            [fieldName]: updatedEthnicity,
+            ethnicity: updatedEthnicity,
         });
+    };
 
+    // Function to handle checkbox changes for intentions
+    const handleIntentionsCheckboxChange = (value) => {
         const updatedIntentions = [...userData.intentions];
 
         if (updatedIntentions.includes(value)) {
@@ -301,7 +304,7 @@ const RegistrationPage = () => {
                                         <input
                                             type="checkbox"
                                             checked={userData.ethnicity.includes('Black/African')}
-                                            onChange={() => handleCheckboxChange('Black/African')}
+                                            onChange={() => handleEthnicityCheckboxChange('Black/African')}
                                         />
                                         Black/African
                                     </label>
@@ -311,7 +314,7 @@ const RegistrationPage = () => {
                                         <input
                                             type="checkbox"
                                             checked={userData.ethnicity.includes('East Asian')}
-                                            onChange={() => handleCheckboxChange('East Asian')}
+                                            onChange={() => handleEthnicityCheckboxChange('East Asian')}
                                         />
                                         East Asian
                                     </label>
@@ -321,7 +324,7 @@ const RegistrationPage = () => {
                                         <input
                                             type="checkbox"
                                             checked={userData.ethnicity.includes('Hispanic/Latino')}
-                                            onChange={() => handleCheckboxChange('Hispanic/Latino')}
+                                            onChange={() => handleEthnicityCheckboxChange('Hispanic/Latino')}
                                         />
                                         Hispanic/Latino
                                     </label>
@@ -331,7 +334,7 @@ const RegistrationPage = () => {
                                         <input
                                             type="checkbox"
                                             checked={userData.ethnicity.includes('Middle Eastern')}
-                                            onChange={() => handleCheckboxChange('Middle Eastern')}
+                                            onChange={() => handleEthnicityCheckboxChange('Middle Eastern')}
                                         />
                                         Middle Eastern
                                     </label>
@@ -341,7 +344,7 @@ const RegistrationPage = () => {
                                         <input
                                             type="checkbox"
                                             checked={userData.ethnicity.includes('Native American')}
-                                            onChange={() => handleCheckboxChange('Native American')}
+                                            onChange={() => handleEthnicityCheckboxChange('Native American')}
                                         />
                                         Native American
                                     </label>
@@ -351,7 +354,7 @@ const RegistrationPage = () => {
                                         <input
                                             type="checkbox"
                                             checked={userData.ethnicity.includes('Pacific Islander')}
-                                            onChange={() => handleCheckboxChange('Pacific Islander')}
+                                            onChange={() => handleEthnicityCheckboxChange('Pacific Islander')}
                                         />
                                         Pacific Islander
                                     </label>
@@ -361,7 +364,7 @@ const RegistrationPage = () => {
                                         <input
                                             type="checkbox"
                                             checked={userData.ethnicity.includes('South Asian')}
-                                            onChange={() => handleCheckboxChange('South Asian')}
+                                            onChange={() => handleEthnicityCheckboxChange('South Asian')}
                                         />
                                         South Asian
                                     </label>
@@ -371,7 +374,7 @@ const RegistrationPage = () => {
                                         <input
                                             type="checkbox"
                                             checked={userData.ethnicity.includes('Southeast Asian')}
-                                            onChange={() => handleCheckboxChange('Southeast Asian')}
+                                            onChange={() => handleEthnicityCheckboxChange('Southeast Asian')}
                                         />
                                         Southeast Asian
                                     </label>
@@ -381,7 +384,7 @@ const RegistrationPage = () => {
                                         <input
                                             type="checkbox"
                                             checked={userData.ethnicity.includes('White/Caucasian')}
-                                            onChange={() => handleCheckboxChange('White/Caucasian')}
+                                            onChange={() => handleEthnicityCheckboxChange('White/Caucasian')}
                                         />
                                         White/Caucasian
                                     </label>
@@ -400,9 +403,6 @@ const RegistrationPage = () => {
                                     <span className="slider"></span>
                                 </label>
                             </div>
-
-                            {/* Next Button */}
-                            <button onClick={handleNextStep}>Next</button>
                         </div>
                     ),
                 };
@@ -420,7 +420,7 @@ const RegistrationPage = () => {
                                     onChange={(e) => handleInputChange('locationSearch', e.target.value)}
                                 />
                             </div>
-                            <button onClick={handleNextStep}>Next</button>
+
                         </div>
                     ),
                 };
@@ -442,9 +442,6 @@ const RegistrationPage = () => {
                                     Friends
                                 </button>
                             </div>
-
-                            {/* Next Button */}
-                            <button onClick={handleNextStep}>Next</button>
                         </div>
                     ),
                 };
@@ -461,7 +458,7 @@ const RegistrationPage = () => {
                                         <input
                                             type="checkbox"
                                             checked={userData.intentions.includes('Looking for a short-term relationship')}
-                                            onChange={() => handleCheckboxChange('Looking for a short-term relationship')}
+                                            onChange={() => handleIntentionsCheckboxChange('Looking for a short-term relationship')}
                                         />
                                         Looking for a short-term relationship
                                     </label>
@@ -471,7 +468,7 @@ const RegistrationPage = () => {
                                         <input
                                             type="checkbox"
                                             checked={userData.intentions.includes('Looking for a long-term relationship')}
-                                            onChange={() => handleCheckboxChange('Looking for a long-term relationship')}
+                                            onChange={() => handleIntentionsCheckboxChange('Looking for a long-term relationship')}
                                         />
                                         Looking for a long-term relationship
                                     </label>
@@ -481,7 +478,7 @@ const RegistrationPage = () => {
                                         <input
                                             type="checkbox"
                                             checked={userData.intentions.includes('Looking for an online/gaming relationship')}
-                                            onChange={() => handleCheckboxChange('Looking for an online/gaming relationship')}
+                                            onChange={() => handleIntentionsCheckboxChange('Looking for an online/gaming relationship')}
                                         />
                                         Looking for an online/gaming relationship
                                     </label>
@@ -496,7 +493,7 @@ const RegistrationPage = () => {
                                         <input
                                             type="checkbox"
                                             checked={userData.intentions.includes('Open to short-term relationship')}
-                                            onChange={() => handleCheckboxChange('Open to short-term relationship')}
+                                            onChange={() => handleIntentionsCheckboxChange('Open to short-term relationship')}
                                         />
                                         Open to short-term relationship
                                     </label>
@@ -506,7 +503,7 @@ const RegistrationPage = () => {
                                         <input
                                             type="checkbox"
                                             checked={userData.intentions.includes('Open to long-term relationship')}
-                                            onChange={() => handleCheckboxChange('Open to long-term relationship')}
+                                            onChange={() => handleIntentionsCheckboxChange('Open to long-term relationship')}
                                         />
                                         Open to long-term relationship
                                     </label>
@@ -525,9 +522,6 @@ const RegistrationPage = () => {
                                     <span className="slider"></span>
                                 </label>
                             </div>
-
-                            {/* Next Button */}
-                            <button onClick={handleNextStep}>Next</button>
                         </div>
                     ),
                 };
@@ -568,8 +562,6 @@ const RegistrationPage = () => {
                                 </ul>
                             </div>
 
-                            {/* Next Button */}
-                            <button onClick={handleNextStep}>Next</button>
                         </div>
                     ),
                 };
@@ -598,7 +590,6 @@ const RegistrationPage = () => {
                                     </label>
                                 </div>
                             </div>
-                            <button onClick={handleNextStep}>Next</button>
                         </div>
                     ),
                 };
@@ -629,15 +620,18 @@ const RegistrationPage = () => {
                                     />
                                 </label>
                             </div>
-                            <button onClick={handleNextStep}>Finish</button>
                         </div>
                     ),
                 };
+
+        default:
+            return null; // Return null for unknown step
         };
+
     };
 
     // Define the maximum number of steps
-    const maxSteps = 10; // Update this based on the total number of steps
+    const maxSteps = 9; // Update this based on the total number of steps
 
     return <div>{renderRegistrationComponents()}</div>;
 };

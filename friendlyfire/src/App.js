@@ -1,17 +1,19 @@
 import "./App.css";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import React, { useState } from "react";
-
 // import Signup from './pages/Signup/Signup';
 // import Login from "./Pages/Login/Login";
-import Login from "./Pages/Registration/Registration";
-
+import Registration from "./Pages/Registration/Registration";
+import Login from "./Pages/Login/Login";
+import Settings from "./Pages/Settings/Settings";
 
 function App() {
   return (
     <Router>
-      {/*<Signup/>*/}
-      <Login />
+      {/* <Signup/> */}
+     {/* <Registration /> */}
+      {/*<Login /> */}
+     <Settings />
     </Router>
   );
 }
