@@ -25,7 +25,7 @@ h2{
   line-height: 130%;
 }
 
-label {
+.step1-question {
   color: var(--Wild-Sand, #F4F4F4);
   font-size: 20px;
   font-style: normal;
@@ -33,7 +33,7 @@ label {
   line-height: 130%;
 }
 
-input {
+.step1-input {
   display: flex;
   color: var(--text-input, #D7D7D7);
   font-size: 15px;
@@ -149,3 +149,14 @@ input:focus {
   background: var(--Rose, #F20C8B)
 }
 
+.profile-question{
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.5px;
+}
+
+.toggle-container{
+  margin-top: 20px;
+}
