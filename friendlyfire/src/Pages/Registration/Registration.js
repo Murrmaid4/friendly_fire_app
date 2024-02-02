@@ -301,8 +301,10 @@ const RegistrationPage = () => {
                     content: (
                         <div>
                             <div>
-                                <p>Select all that applies to you.</p>
-                                <div>
+                                <div className='selectall-container'>
+                                    <p className='ethnicity-question'>Select all that applies to you.</p>
+                                </div>
+                                <div className='checkbox-container'>
                                     <label>
                                         <input
                                             type="checkbox"
@@ -312,7 +314,7 @@ const RegistrationPage = () => {
                                         Black/African
                                     </label>
                                 </div>
-                                <div>
+                                <div className='checkbox-container'>
                                     <label>
                                         <input
                                             type="checkbox"
@@ -322,7 +324,7 @@ const RegistrationPage = () => {
                                         East Asian
                                     </label>
                                 </div>
-                                <div>
+                                <div className='checkbox-container'>
                                     <label>
                                         <input
                                             type="checkbox"
@@ -332,7 +334,7 @@ const RegistrationPage = () => {
                                         Hispanic/Latino
                                     </label>
                                 </div>
-                                <div>
+                                <div className='checkbox-container'>
                                     <label>
                                         <input
                                             type="checkbox"
@@ -342,7 +344,7 @@ const RegistrationPage = () => {
                                         Middle Eastern
                                     </label>
                                 </div>
-                                <div>
+                                <div className='checkbox-container'>
                                     <label>
                                         <input
                                             type="checkbox"
@@ -352,7 +354,7 @@ const RegistrationPage = () => {
                                         Native American
                                     </label>
                                 </div>
-                                <div>
+                                <div className='checkbox-container'>
                                     <label>
                                         <input
                                             type="checkbox"
@@ -362,7 +364,7 @@ const RegistrationPage = () => {
                                         Pacific Islander
                                     </label>
                                 </div>
-                                <div>
+                                <div className='checkbox-container'>
                                     <label>
                                         <input
                                             type="checkbox"
@@ -372,7 +374,7 @@ const RegistrationPage = () => {
                                         South Asian
                                     </label>
                                 </div>
-                                <div>
+                                <div className='checkbox-container'>
                                     <label>
                                         <input
                                             type="checkbox"
@@ -382,7 +384,7 @@ const RegistrationPage = () => {
                                         Southeast Asian
                                     </label>
                                 </div>
-                                <div>
+                                <div className='checkbox-container'>
                                     <label>
                                         <input
                                             type="checkbox"
@@ -395,7 +397,7 @@ const RegistrationPage = () => {
                             </div>
 
                             {/* Show On Profile Toggle Switch */}
-                            <div className="toggle-switch">
+                            <div>
                                 <label>Show on Profile:</label>
                                 <label className="switch">
                                     <input
@@ -418,6 +420,7 @@ const RegistrationPage = () => {
                                 <label>Search for your location:</label>
                                 <input
                                     type="text"
+                                    className='step4-input'
                                     placeholder="Enter your location"
                                     value={userData.locationSearch}
                                     onChange={(e) => handleInputChange('locationSearch', e.target.value)}
@@ -455,8 +458,8 @@ const RegistrationPage = () => {
                     content: (
                         <div>
                             <div>
-                                <p>Select your intentions:</p>
-                                <div>
+                                <p className='selectall-container'>Select your intentions:</p>
+                                <div className='checkbox-container'>
                                     <label>
                                         <input
                                             type="checkbox"
@@ -466,7 +469,7 @@ const RegistrationPage = () => {
                                         Looking for a short-term relationship
                                     </label>
                                 </div>
-                                <div>
+                                <div className='checkbox-container'>
                                     <label>
                                         <input
                                             type="checkbox"
@@ -476,7 +479,7 @@ const RegistrationPage = () => {
                                         Looking for a long-term relationship
                                     </label>
                                 </div>
-                                <div>
+                                <div className='checkbox-container'>
                                     <label>
                                         <input
                                             type="checkbox"
@@ -491,7 +494,7 @@ const RegistrationPage = () => {
                             {/* Optional Section */}
                             <div>
                                 <p>(Optional)</p>
-                                <div>
+                                <div className='checkbox-container'>
                                     <label>
                                         <input
                                             type="checkbox"
@@ -501,7 +504,7 @@ const RegistrationPage = () => {
                                         Open to short-term relationship
                                     </label>
                                 </div>
-                                <div>
+                                <div className='checkbox-container'>
                                     <label>
                                         <input
                                             type="checkbox"

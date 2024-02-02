@@ -14,7 +14,7 @@ h1{
   font-weight: 600;
   line-height: 14px; 
   margin-top: 70px;
-  margin-bottom: 90px;
+  margin-bottom: 60px;
 }
 
 h2{
@@ -51,10 +51,9 @@ h2{
   margin-top: 20px;
   margin-bottom: 52px;
   padding-left: 10px;
-  
 }
 
-input::placeholder{
+.step1-input::placeholder{
   color: var(--text-input, #D7D7D7);
   font-size: 15px;
   font-style: normal;
@@ -63,18 +62,49 @@ input::placeholder{
 }
 
 
-input[type="date"]::-webkit-datetime-edit{
+.step1-input[type="date"]::-webkit-datetime-edit{
   color: var(--text-input, #D7D7D7);
 }
 
-input[type="date"]::-webkit-calendar-picker-indicator{
+.step1-input[type="date"]::-webkit-calendar-picker-indicator{
   filter: invert(100%);
   width: 20px;
   height: 20px;
   padding-right: 15px;
 }
 
-input:focus {
+.step1-input:focus {
+  outline: 2px solid var(--Rose, #F20C8B);
+}
+
+.step4-input {
+  display: flex;
+  color: var(--text-input, #D7D7D7);
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  width: 353px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 12px;
+  border: 2px solid var(--black-rock-overlay, #2C2849);
+  margin-top: 20px;
+  margin-bottom: 52px;
+  padding-left: 10px;
+}
+
+.step4-input::placeholder{
+  color: var(--text-input, #D7D7D7);
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 18px */
+}
+
+.step4-input:focus {
   outline: 2px solid var(--Rose, #F20C8B);
 }
 
@@ -159,4 +189,46 @@ input:focus {
 
 .toggle-container{
   margin-top: 20px;
+}
+
+.checkbox-container{
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+  flex-direction: row;
+}
+
+.checkbox-container label{
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  width: 300px;
+}
+
+.checkbox-container input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 17px;
+  height: 17px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  margin-left: 10px;
+  cursor: pointer;
+  background-color: var(--black-rock-overlay, #2C2849);
+  position: absolute;
+  right: 22px;
+}
+
+p{
+  color: var(--Wild-Sand, #F4F4F4);
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.selectall-container {
+  padding-bottom: 20px;
 }
