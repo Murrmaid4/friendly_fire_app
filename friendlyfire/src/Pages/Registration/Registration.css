@@ -128,7 +128,7 @@ input:focus {
   flex-direction: column;
 }
 
-button{
+.identity-button{
   width: 351px;
   height: 66px;
   flex-shrink: 0;
@@ -145,7 +145,7 @@ button{
   padding-left: 30px;
 }
 
-button:focus{
+.identity-button:focus{
   background: var(--Rose, #F20C8B)
 }
 
