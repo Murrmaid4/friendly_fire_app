@@ -233,13 +233,13 @@ const RegistrationPage = () => {
                             {/* I identify as question with rectangular buttons */}
                             <div>
                                 <div className='button-container'>
-                                    <button onClick={() => handleInputChange('genderIdentity', 'Woman')}>
+                                    <button onClick={() => handleInputChange('genderIdentity', 'Woman')} className='identity-button'>
                                         Woman
                                     </button>
-                                    <button onClick={() => handleInputChange('genderIdentity', 'Man')}>
+                                    <button onClick={() => handleInputChange('genderIdentity', 'Man')} className='identity-button'>
                                         Man
                                     </button>
-                                    <button onClick={() => setShowMoreOptions(!showMoreOptions)}>
+                                    <button onClick={() => setShowMoreOptions(!showMoreOptions)} className='identity-button'>
                                         More
                                     </button>
                                 </div>
@@ -267,7 +267,7 @@ const RegistrationPage = () => {
 
                                 {/* Prefer Not To Say option */}
                                 <div className='button-container'>
-                                    <button onClick={() => handleInputChange('genderIdentity', 'Prefer Not To Say')}>
+                                    <button onClick={() => handleInputChange('genderIdentity', 'Prefer Not To Say')} className='identity-button'>
                                         Prefer Not To Say
                                     </button>
                                 </div>
