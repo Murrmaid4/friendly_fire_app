@@ -4,6 +4,7 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import "./Registration.css";
+import Toggle from 'react-toggle';
 
 
 
@@ -207,22 +208,24 @@ const RegistrationPage = () => {
                             {/* ... Previous questions ... */}
                             {/* What is your preferred name text input */}
                             <div>
-                                <label>What is your preferred name?</label>
+                                <label className='step1-question'>What is your preferred name?</label>
                                 <input
                                     type="text"
                                     placeholder='Enter your First Name or Nickname'
                                     value={userData.preferredName}
                                     onChange={(e) => handleInputChange('preferredName', e.target.value)}
+                                    className='step1-input'
                                 />
                             </div>
 
                             {/* When is your birthday calendar input */}
                             <div>
-                                <label>When is your birthday?</label>
+                                <label className='step1-question'>When is your birthday?</label>
                                 <input
                                     type="date"
                                     value={userData.birthday}
                                     onChange={(e) => handleInputChange('birthday', e.target.value)}
+                                    className='step1-input'
                                 />
                             </div>
                         </div>
@@ -277,10 +280,10 @@ const RegistrationPage = () => {
                             </div>
 
                             {/* Show On Profile Toggle Switch */}
-                            <div className="toggle-switch">
-                                <label>Show on Profile:</label>
+                            <div className="toggle-container">
+                                <label className='profile-question'>Show on Profile</label>
                                 <label className="switch">
-                                    <input
+                                    <Toggle
                                         type="checkbox"
                                         checked={userData.showOnProfile}
                                         onChange={() => handleInputChange('showOnProfile', !userData.showOnProfile)}

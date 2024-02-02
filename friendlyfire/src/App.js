@@ -11,9 +11,9 @@ function App() {
   return (
     <Router>
       {/* <Signup/> */}
-     {/* <Registration /> */}
+      <Registration />
       {/*<Login /> */}
-     <Settings />
+      {/*<Settings />*/}
     </Router>
   );
 }
