@@ -1,8 +1,7 @@
 import React from 'react'
 import Logo from '../../assets/StackedLogo.svg';
 
-
-export const Account = () => {
+ const Account = () => {
   return (
     <div>
         <h1>My Character Sheet</h1>
@@ -20,3 +19,5 @@ export const Account = () => {
     </div>
   )
 }
+
+export default Account

@@ -1,19 +1,21 @@
 import "./App.css";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router,Routes, Route } from "react-router-dom";
 import React, { useState } from "react";
-// import Signup from './pages/Signup/Signup';
-// import Login from "./Pages/Login/Login";
+import Signup from './Pages/Signup/Signup';
+import Account from './Pages/Account/Account';
 import Registration from "./Pages/Registration/Registration";
-import Login from "./Pages/Login/Login";
-import Settings from "./Pages/Settings/Settings";
+import Matches from "./Pages/Matches/Matches";
+
 
 function App() {
   return (
     <Router>
-      {/* <Signup/> */}
-      <Registration />
-      {/*<Login /> */}
-      {/*<Settings />*/}
+   <Routes>
+    <Route path="/" element={<Signup/> }/>
+    <Route path="/account" element={<Account/> }/>
+    <Route path="/signup" element={<Registration/> }/>
+    <Route path="/matches" element={<Matches/> }/>
+   </Routes>
     </Router>
   );
 }
