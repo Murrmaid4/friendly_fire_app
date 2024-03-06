@@ -6,12 +6,15 @@ const jwt = require('jsonwebtoken')
 const cors = require('cors')
 const bcrypt = require('bcrypt')
 require('dotenv').config()
+// this brings the modules into this page to be used
 
 const uri = process.env.URI
+// grabs our server information from the env file 
 
 const app = express()
 app.use(cors())
 app.use(express.json())
+//connects to express node module 
 
 // Default
 app.get('/', (req, res) => {
@@ -21,17 +24,23 @@ app.get('/', (req, res) => {
 // Sign up to the Database
 app.post('/signup', async (req, res) => {
     const client = new MongoClient(uri)
+    // connects to atlas  database
     const {email, password} = req.body
-
+// adds email and password to req.body
     const generatedUserId = uuidv4()
+    // generates unique id for users using uuid npm
     const hashedPassword = await bcrypt.hash(password, 10)
 
     try {
         await client.connect()
+        // this connects to the database 
         const database = client.db('app-data')
+        // grabs the app-data database
         const users = database.collection('users')
+        // finds the user collection
 
         const existingUser = await users.findOne({email})
+        // queries the user collection to find the email that was entered in the req.body
 
         if (existingUser) {
             return res.status(409).send('User already exists. Please login')
