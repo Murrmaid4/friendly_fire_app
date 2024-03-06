@@ -1,27 +1,28 @@
 import React from "react";
 import Logo from '../../assets/signuplogo.svg';
+import {useState} from 'react'
 import "./Signup.css";
 
 
 const Signup = () => {
-  // const [email, setEmail] = useState("");
-  // const [password, setPassword] = useState("");
-  // const [confirmPassword, setConfirmPassword] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
 
-  // const handleEmailChange = (e) => {
-  //   setEmail(e.target.value);
-  // };
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
 
-  // const handlePasswordChange = (e) => {
-  //   setPassword(e.target.value);
-  // };
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+  };
 
-  // const handleConfirmPasswordChange = (e) => {
-  //   setConfirmPassword(e.target.value);
-  // };
+  const handleConfirmPasswordChange = (e) => {
+    setConfirmPassword(e.target.value);
+  };
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();}
+  const handleSubmit = (e) => {
+    e.preventDefault();}
 
     return (
       <div>
@@ -38,8 +39,8 @@ const Signup = () => {
               <input
                 type="email"
                 placeholder="Enter-E-mail"
-                //value={email}
-                // onChange={handleEmailChange}
+                value={email}
+                onChange={handleEmailChange}
                 required
               />
             </label>
@@ -49,8 +50,8 @@ const Signup = () => {
               <input
                 type="password"
                 placeholder="Enter Password"
-                // value={password}
-                // onChange={handlePasswordChange}
+                value={password}
+                onChange={handlePasswordChange}
                 required
               />
             </label>
@@ -60,8 +61,8 @@ const Signup = () => {
               <input
                 type="password"
                 placeholder="Re-enter Password"
-                // value={confirmPassword}
-                // onChange={handleConfirmPasswordChange}
+                value={confirmPassword}
+                onChange={handleConfirmPasswordChange}
                 required
               />
             </label>
