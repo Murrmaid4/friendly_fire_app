@@ -5,10 +5,12 @@ const {v4: uuidv4} = require('uuid')
 const jwt = require('jsonwebtoken')
 const cors = require('cors')
 const bcrypt = require('bcrypt')
-require('dotenv').config()
+// require('dotenv').config()
+// process.env.URI
+
 // this brings the modules into this page to be used
 
-const uri = process.env.URI
+const uri = "mongodb+srv://pritchettb14:friendlyfire@cluster0.bzxi0yi.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 // grabs our server information from the env file 
 
 const app = express()
@@ -141,25 +143,25 @@ app.put('/addmatch', async (req, res) => {
 // Get all Users by userIds in the Database
 app.get('/users', async (req, res) => {
     const client = new MongoClient(uri)
-    const userIds = JSON.parse(req.query.userIds)
+    // const userIds = JSON.parse(req.query.userIds)
 
     try {
         await client.connect()
         const database = client.db('app-data')
         const users = database.collection('users')
 
-        const pipeline =
-            [
-                {
-                    '$match': {
-                        'user_id': {
-                            '$in': userIds
-                        }
-                    }
-                }
-            ]
+        // const pipeline =
+        //     [
+        //         {
+        //             '$match': {
+        //                 'user_id': {
+        //                     '$in': userIds
+        //                 }
+        //             }
+        //         }
+        //     ]
 
-        const foundUsers = await users.aggregate(pipeline).toArray()
+        const foundUsers = await users.find().toArray()
 
         res.json(foundUsers)
 
