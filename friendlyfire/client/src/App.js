@@ -5,6 +5,8 @@ import Signup from './Pages/Signup/Signup';
 import Account from './Pages/Account/Account';
 import Registration from "./Pages/Registration/Registration";
 import Matches from "./Pages/Matches/Matches";
+import Messages from './Pages/Messages/Messages'; 
+
 
 
 function App() {
@@ -15,6 +17,8 @@ function App() {
     <Route path="/account" element={<Account/> }/>
     <Route path="/signup" element={<Registration/> }/>
     <Route path="/matches" element={<Matches/> }/>
+    <Route path="/messages" element={<Messages />} />
+
    </Routes>
     </Router>
   );

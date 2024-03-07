@@ -1,0 +1,36 @@
+/* Messages.css */
+
+.messages-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .message-list {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .message {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 8px;
+    max-width: 70%;
+  }
+  
+  .user {
+    align-self: flex-end;
+    background-color: #3f92f7;
+    color: white;
+  }
+  
+  .other {
+    align-self: flex-start;
+    background-color: #f0f0f0;
+    color: black;
+  }
+  
+  .send-message-form {
+    display: flex;
+    margin-top: 10px;
+  }
+  
