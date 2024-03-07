@@ -76,7 +76,7 @@
 /* React toggle css */
   .react-toggle {
     touch-action: pan-x;
-    left: 320px;
+    left: 1200px;
     transform: scale(0.8);
     display: inline-block;
     position:fixed;
