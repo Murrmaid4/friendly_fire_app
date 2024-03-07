@@ -28,12 +28,12 @@ const Signup = () => {
       <div>
        
         <div className="logo-container">{/* div for logo */}
-        <img src={Logo} alt="friendlyfire app logo" className="logo"/>
-        <h1>Sign Up</h1>
+          <img src={Logo} alt="friendlyfire app logo" className="logo"/>
         </div>
-
+        <h1 className="signup">Sign Up</h1>
+        
         <div>
-          <form >
+          <form>
             <label>
               Email:
               <input

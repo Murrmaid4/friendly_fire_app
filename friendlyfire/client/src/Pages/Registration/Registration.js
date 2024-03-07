@@ -5,6 +5,8 @@ import React, { useState } from 'react';
 // import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import "./Registration.css";
 import Toggle from 'react-toggle';
+import DatingIcon from '../../assets/datingicon.svg'
+import FriendsIcon from '../../assets/friendsicon.svg'
 
 
 
@@ -417,10 +419,10 @@ const RegistrationPage = () => {
                     content: (
                         <div>
                             <div>
-                                <label>Search for your location:</label>
+                                <label className="location-label">Search for your location:</label>
                                 <input
                                     type="text"
-                                    className='step4-input'
+                                    className="step4-input"
                                     placeholder="Enter your location"
                                     value={userData.locationSearch}
                                     onChange={(e) => handleInputChange('locationSearch', e.target.value)}
@@ -439,12 +441,12 @@ const RegistrationPage = () => {
 
                             {/* Buttons for Dating and Friends */}
                             <div>
-                                <button onClick={() => handleInputChange('lookingFor', 'Dating')}>
-                                    <img src="" alt="Heart Icon" />
+                                <button className='lookingfor-button' onClick={() => handleInputChange('lookingFor', 'Dating')}>
+                                    <img src={DatingIcon} alt="Heart Icon" />
                                     Dating
                                 </button>
-                                <button onClick={() => handleInputChange('lookingFor', 'Friends')}>
-                                    <img src="" alt="Friends Icon" />
+                                <button className='lookingfor-button' onClick={() => handleInputChange('lookingFor', 'Friends')}>
+                                    <img src={FriendsIcon} alt="Friends Icon" />
                                     Friends
                                 </button>
                             </div>
@@ -541,6 +543,7 @@ const RegistrationPage = () => {
                                 <select
                                     value=""
                                     onChange={(e) => handleGameSelect(e.target.value)}
+                                    className='custom-select'
                                 >
                                     <option value="" disabled>
                                         Choose Options
