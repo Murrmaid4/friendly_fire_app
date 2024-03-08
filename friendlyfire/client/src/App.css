@@ -29,11 +29,13 @@
 :root {
   --white: #F4F4F4;
   --black: #0B0326;
+  --black-rock-overlay: #2C2849;
   --purple: #6626A6;
   --darBlue: #39B2BF;
   --liBlue: #1DF2DD;
   --pink: #F20C8B;
   --gradient: linear-gradient(to right, #F20C8B, #39B2BF);
+  --text-input: #D7D7D7;
 }
 
 .app {

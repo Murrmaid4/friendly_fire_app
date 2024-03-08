@@ -7,7 +7,7 @@ body {
 }
 
 h1{
-  color: var(--Wild-Sand, #F4F4F4);
+  color: var(--white);
   text-align: center;
   font-size: 20px;
   font-style: normal;
@@ -18,7 +18,7 @@ h1{
 }
 
 h2{
-  color: var(--Wild-Sand, #F4F4F4);
+  color: var(--white);
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
@@ -26,7 +26,7 @@ h2{
 }
 
 .step1-question {
-  color: var(--Wild-Sand, #F4F4F4);
+  color: var(--white);
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
@@ -35,7 +35,7 @@ h2{
 
 .step1-input {
   display: flex;
-  color: var(--text-input, #D7D7D7);
+  color: var(--text-input);
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
@@ -46,7 +46,7 @@ h2{
   align-items: center;
   flex-shrink: 0;
   border-radius: 12px;
-  border: 2px solid var(--black-rock-overlay, #2C2849);
+  border: 2px solid var(--black-rock-overlay);
   background: none;
   margin-top: 20px;
   margin-bottom: 52px;
@@ -54,7 +54,7 @@ h2{
 }
 
 .step1-input::placeholder{
-  color: var(--text-input, #D7D7D7);
+  color: var(--text-input);
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
@@ -63,7 +63,7 @@ h2{
 
 
 .step1-input[type="date"]::-webkit-datetime-edit{
-  color: var(--text-input, #D7D7D7);
+  color: var(--text-input);
 }
 
 .step1-input[type="date"]::-webkit-calendar-picker-indicator{
@@ -74,12 +74,12 @@ h2{
 }
 
 .step1-input:focus {
-  outline: 2px solid var(--Rose, #F20C8B);
+  outline: 2px solid var(--pink);
 }
 
 .step4-input {
   display: flex;
-  color: var(--text-input, #D7D7D7);
+  color: var(--text-input);
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
@@ -90,7 +90,7 @@ h2{
   align-items: center;
   flex-shrink: 0;
   border-radius: 12px;
-  border: 2px solid var(--black-rock-overlay, #2C2849);
+  border: 2px solid var(--black-rock-overlay);
   background: none;
   margin-top: 20px;
   margin-bottom: 52px;
@@ -98,7 +98,7 @@ h2{
 }
 
 .step4-input::placeholder{
-  color: var(--text-input, #D7D7D7);
+  color: var(--text-input);
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
@@ -106,7 +106,7 @@ h2{
 }
 
 .step4-input:focus {
-  outline: 2px solid var(--Rose, #F20C8B);
+  outline: 2px solid var(--pink);
 }
 
 .location-label {
@@ -118,9 +118,9 @@ h2{
   height: 48px;
   flex-shrink: 0;
   border-radius: 12px;
-  border: 1px solid var(--Pelorous, #39B2BF);
-  background: #39B2BF;
-  color: #F4F4F4;
+  border: 1px solid var(--darBlue);
+  background: var(--darBlue);
+  color: var(--white);
   text-align: center;
   font-size: 15px;
   font-style: normal;
@@ -139,9 +139,9 @@ h2{
   height: 48px;
   flex-shrink: 0;
   border-radius: 12px;
-  border: 1px solid var(--black-rock-overlay, #2C2849);
-  background:  var(--black-rock-overlay, #2C2849);
-  color: #F4F4F4;
+  border: 1px solid var(--black-rock-overlay);
+  background:  var(--black-rock-overlay);
+  color: var(--white);
   text-align: center;
   font-size: 15px;
   font-style: normal;
@@ -168,10 +168,10 @@ h2{
   height: 66px;
   flex-shrink: 0;
   border-radius: 8px;
-  background: var(--black-rock-overlay, #2C2849);
-  border: 1px solid var(--black-rock-overlay, #2C2849);
+  background: var(--black-rock-overlay);
+  border: 1px solid var(--black-rock-overlay);
   margin-bottom: 10px; 
-  color: var(--Wild-Sand, #F4F4F4);
+  color: var(--white);
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
@@ -181,7 +181,7 @@ h2{
 }
 
 .identity-button:focus{
-  background: var(--Rose, #F20C8B)
+  background: var(--pink)
 }
 
 .profile-question{
@@ -221,13 +221,13 @@ h2{
   border-radius: 4px;
   margin-left: 10px;
   cursor: pointer;
-  background-color: var(--black-rock-overlay, #2C2849);
+  background-color: var(--black-rock-overlay);
   position: absolute;
   right: 22px;
 }
 
 p{
-  color: var(--Wild-Sand, #F4F4F4);
+  color: var(--white);
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
@@ -242,10 +242,10 @@ p{
   width: 138px;
   height: 178px;
   flex-shrink: 0;
-  background-color: var(--black-rock-overlay, #2C2849);
+  background-color: var(--black-rock-overlay);
   border: none;
   border-radius: 8px;
-  color: var(--Wild-Sand, #F4F4F4);
+  color: var(--white);
 
 }
 
@@ -255,5 +255,5 @@ p{
   flex-shrink: 0;
   border-radius: 12px;
   border: 1px solid var(--gradient);
-  background: var(--black-rock-overlay, #2C2849);
+  background: var(--black-rock-overlay);
 }
