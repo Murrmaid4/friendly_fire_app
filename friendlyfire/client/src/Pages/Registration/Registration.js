@@ -440,14 +440,14 @@ const RegistrationPage = () => {
                             <p>You can change this at any time.</p>
 
                             {/* Buttons for Dating and Friends */}
-                            <div>
-                                <button className='lookingfor-button' onClick={() => handleInputChange('lookingFor', 'Dating')}>
+                            <div className='mode-button-container'>
+                                <button className='mode-button' onClick={() => handleInputChange('lookingFor', 'Dating')}>
                                     <img src={DatingIcon} alt="Heart Icon" />
-                                    Dating
+                                    <span>Dating</span>
                                 </button>
-                                <button className='lookingfor-button' onClick={() => handleInputChange('lookingFor', 'Friends')}>
+                                <button className='mode-button' onClick={() => handleInputChange('lookingFor', 'Friends')}>
                                     <img src={FriendsIcon} alt="Friends Icon" />
-                                    Friends
+                                    <span>Friends</span>
                                 </button>
                             </div>
                         </div>
@@ -561,7 +561,7 @@ const RegistrationPage = () => {
                                 <p>Selected Games:</p>
                                 <ul>
                                     {userData.selectedGames.map((game) => (
-                                        <li key={game}>
+                                        <li className= 'games-list' key={game}>
                                             {game}
                                             <button onClick={() => handleGameRemove(game)}>
                                                 Remove
@@ -589,13 +589,13 @@ const RegistrationPage = () => {
                                         </div>
                                     ))}
                                     <label className="photo-container" htmlFor="photo-upload">
-                                        <span>+</span>
+                                      
                                         <input
                                             type="file"
                                             id="photo-upload"
                                             accept="image/*"
                                             onChange={handlePhotoUpload}
-                                        />
+                                        />  <span>+</span>
                                     </label>
                                 </div>
                             </div>
@@ -620,13 +620,14 @@ const RegistrationPage = () => {
 
                                 {/* Upload gaming highlight button */}
                                 <label className="highlight-container" htmlFor="highlight-upload">
-                                    <span>+</span>
+                                    
                                     <input
                                         type="file"
                                         id="highlight-upload"
                                         accept="video/*"
                                         onChange={handleHighlightUpload}
                                     />
+                                    <span>+</span>
                                 </label>
                             </div>
                         </div>
