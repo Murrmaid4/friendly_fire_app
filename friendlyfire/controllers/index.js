@@ -11,7 +11,7 @@ const bcrypt = require('bcrypt')
 // this brings the modules into this page to be used
 
 const uri = "mongodb+srv://pritchettb14:friendlyfire@cluster0.bzxi0yi.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
-// grabs our server information from the env file 
+// this connects to our database in atlas 
 
 const app = express()
 app.use(cors())
@@ -22,20 +22,22 @@ app.use(express.json())
 app.get('/', (req, res) => {
     res.json('Hello to my app')
 })
+// for testing in the browser, if you do npm run start:backend  in controllers folder 
 
 // Sign up to the Database
 app.post('/signup', async (req, res) => {
     const client = new MongoClient(uri)
-    // connects to atlas  database
+    //this is the variable that holds the mongo npm and database link<< this is typically the first step in every server request
     const {email, password} = req.body
-// adds email and password to req.body
+// variable that will hold the email and password entered 
     const generatedUserId = uuidv4()
-    // generates unique id for users using uuid npm
+    // this variable will hold a unique id for users using uuid npm
     const hashedPassword = await bcrypt.hash(password, 10)
+    // this utilizes the bcrypt npm and hashes the password the user enters (for security!)
 
     try {
         await client.connect()
-        // this connects to the database 
+        // this calls the variable that connects to the database 
         const database = client.db('app-data')
         // grabs the app-data database
         const users = database.collection('users')
@@ -49,6 +51,7 @@ app.post('/signup', async (req, res) => {
         }
 
         const sanitizedEmail = email.toLowerCase()
+        
 
         const data = {
             user_id: generatedUserId,
@@ -65,6 +68,56 @@ app.post('/signup', async (req, res) => {
 
     } catch (err) {
         console.log(err)
+    } finally {
+        await client.close()
+    }
+})
+
+//test to find all users in the database - tested and is working
+app.get('/users', async (req, res) => {
+    const client = new MongoClient(uri)
+    // const userIds = JSON.parse(req.query.userIds)
+
+    try {
+        await client.connect()
+        const database = client.db('app-data')
+        const users = database.collection('users')
+
+        // const pipeline =
+        //     [
+        //         {
+        //             '$match': {
+        //                 'user_id': {
+        //                     '$in': userIds
+        //                 }
+        //             }
+        //         }
+        //     ]
+
+        const foundUsers = await users.find().toArray()
+
+        res.json(foundUsers)
+
+    } finally {
+        await client.close()
+    }
+})
+
+// Get all the Gendered Users in the Database - tested and is working
+app.get('/gendered-users/:gender', async (req, res) => {
+    const client = new MongoClient(uri)
+    const gender = req.params.gender
+    console.log(gender)
+
+    try {
+        await client.connect()
+        const database = client.db('app-data')
+        const users = database.collection('users')
+        
+        const foundUsers = await users.find({gender_identity: gender}).toArray()
+        res.json(foundUsers)
+        console.log(foundUsers)
+
     } finally {
         await client.close()
     }
@@ -140,53 +193,7 @@ app.put('/addmatch', async (req, res) => {
     }
 })
 
-// Get all Users by userIds in the Database
-app.get('/users', async (req, res) => {
-    const client = new MongoClient(uri)
-    // const userIds = JSON.parse(req.query.userIds)
 
-    try {
-        await client.connect()
-        const database = client.db('app-data')
-        const users = database.collection('users')
-
-        // const pipeline =
-        //     [
-        //         {
-        //             '$match': {
-        //                 'user_id': {
-        //                     '$in': userIds
-        //                 }
-        //             }
-        //         }
-        //     ]
-
-        const foundUsers = await users.find().toArray()
-
-        res.json(foundUsers)
-
-    } finally {
-        await client.close()
-    }
-})
-
-// Get all the Gendered Users in the Database
-app.get('/gendered-users', async (req, res) => {
-    const client = new MongoClient(uri)
-    const gender = req.query.gender
-
-    try {
-        await client.connect()
-        const database = client.db('app-data')
-        const users = database.collection('users')
-        const query = {gender_identity: {$eq: gender}}
-        const foundUsers = await users.find(query).toArray()
-        res.json(foundUsers)
-
-    } finally {
-        await client.close()
-    }
-})
 
 // Update a User in the Database
 app.put('/user', async (req, res) => {

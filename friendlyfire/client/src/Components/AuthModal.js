@@ -1,8 +1,8 @@
+
 import { useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import { useCookies } from 'react-cookie'
-
 
 const AuthModal = ({ setShowModal,  isSignUp }) => {
     const [email, setEmail] = useState(null)
