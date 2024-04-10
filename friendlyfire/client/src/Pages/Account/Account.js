@@ -11,15 +11,28 @@ import gameart2 from '../../assets/GameArt/Valorant.jpg';
 import gameart3 from '../../assets/GameArt/fortnite.jpg';
 import gameart4 from '../../assets/GameArt/mariokart.jpg';
 import gameart5 from '../../assets/GameArt/baldursgate.jpg';
-//const placeholderImage1 = 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1';
-//const placeholderImage2 = 'https://images.pexels.com/photos/1239288/pexels-photo-1239288.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1';
-//const placeholderImage3 = 'https://images.pexels.com/photos/1832959/pexels-photo-1832959.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1';
+import jobIcon from '../../assets/Icons/suitcase.svg';
+import gradIcon from '../../assets/Icons/graduation-cap.svg';
+import womanIcon from '../../assets/Icons/woman.svg';
+import prayIcon from '../../assets/Icons/pray.svg';
+import languageIcon from '../../assets/Icons/world.svg';
+import searchIcon from '../../assets/Icons/search.svg';
+import drinkIcon from '../../assets/Icons/drink.svg';
+import smokeIcon from '../../assets/Icons/smoking.svg';
+import marijuanaIcon from '../../assets/Icons/marijuana.svg';
+import childrenIcon from '../../assets/Icons/stuffedtoy.svg';
+import workoutIcon from '../../assets/Icons/dumbbell.svg';
+
+// array for profile pictures, interests, lifestyle, consoles, gaming interests, and game images
 const images = [placeholderImage1, placeholderImage2, placeholderImage3];
 const gameImages = [gameart1, gameart2, gameart3, gameart4, gameart5];
 const interests = ['Animator', 'Florida International University', 'Postgrad', 'Woman', 'Agnostic', 'English', 'Long-term relationships'];
-const lifestyle = ['Socially', 'Never', 'Never', 'I want children', 'Daily'];
-const consoles = ['PC','Nintendo'];
+const lifestyle = ['Socially', 'Never', 'No', 'I want children', 'Daily'];
+const consoles = ['PC','Nintendo', 'Playstation'];
 const gaminginterests = ['Action', 'MMORPG', 'RPG', 'Casual', 'Indie'];
+  
+// Image swipe functionality
+
 const Account = () => {
   const aspectRatio = 3 / 4;
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -28,7 +41,6 @@ const Account = () => {
   const [height, setHeight] = useState(width / aspectRatio);
   const [showBio, setShowBio] = useState(false);
 
-  // Define the functions with their implementations
   const handleSwipe = (direction) => {
     if (direction === 'left') {
       setCurrentImageIndex((currentImageIndex + 1) % images.length);
@@ -90,7 +102,7 @@ const Account = () => {
       window.removeEventListener('resize', handleResize);
     };
   }, [width, aspectRatio]);
-
+//settings icon linked to settings page
   return (
     <div>
       <div className="settings-icon">
@@ -104,13 +116,13 @@ const Account = () => {
           </div>
         </Link>
       </div>
-
+{/* Logo and title of the app */}
       <div className="logo-container">
         <img src={Logo2} alt="friendlyfire app logo" className="logo" style={{ width: '50px', height: '50px' }} />
         <h1>FriendlyFire</h1>
         <h2>My Character Sheet</h2>
       </div>
-
+{/*Profile Picture and swipe functionality */}
       <div
         className="profile-container"
         onMouseDown={handleMouseDown}
@@ -128,18 +140,48 @@ const Account = () => {
             style={{ width: `${width}px`, height: `${height}px` }}
           />
         </div>
-
+{/* Interests scroll bar */}
         <div className="interests-bar">
           <div className="interests-container">
-            {interests.map((interest, index) => (
-              <div key={index} className="interest-item">
-                {interest}
-              </div>
-            ))}
+            {interests.map((interest, index) => {
+              let Icon;
+              switch (interest) {
+                case 'Animator':
+                  Icon = jobIcon;
+                  break;
+                case 'Florida International University':
+                  Icon = gradIcon;
+                  break;
+                  case 'Postgrad':
+                    Icon = gradIcon;
+                    break;
+                    case 'Woman':
+                      Icon = womanIcon;
+                      break;
+                      case 'Agnostic':
+                        Icon = prayIcon;
+                        break;
+                        case 'English':
+                          Icon = languageIcon;
+                          break;
+                          case 'Long-term relationships':
+                            Icon = searchIcon;
+                            break;
+                // ... add more cases as needed ...
+                default:
+                  Icon = null;
+              }
+              return (
+                <div key={index} className="interest-item">
+                  {Icon && <img src={Icon} alt={interest} className="interest-icon" />}
+                  {interest}
+                </div>
+              );
+            })}
           </div>
         </div>
 
-
+{/* Profile information */}
         <div className="profile-info">
           <h1>Jane Doe, 24 </h1>
           <h3> 5 Miles aways</h3>
@@ -158,19 +200,43 @@ const Account = () => {
               </span>
             </p>
           )}
+          {/* Lifestyle scroll bar */}
            <h1>Lifestyle</h1>
           <div className="interests-barLifestyle">
           <div className="interests-container">
            
-            {lifestyle.map((lifestyle, index) => (
+            {lifestyle.map((lifestyle, index) => {
+              let Icon;
+              switch (lifestyle) {
+                case 'Socially':
+                  Icon = drinkIcon;
+                  break;
+                case 'Never':
+                  Icon = smokeIcon;
+                  break;
+                  case 'No':
+                    Icon = marijuanaIcon;
+                    break;
+                    case 'I want children':
+                      Icon = childrenIcon;
+                      break;
+                      case 'Daily':
+                        Icon = workoutIcon;
+                        break;
+                default:
+                  Icon = null;
+              }
+              return (
               <div key={index} className="interest-item">
+                {Icon && <img src={Icon} alt={lifestyle} className="interest-icon" />}
                 {lifestyle}
               </div>
-            ))}
+            );
+            })}
           </div>
         </div>
        
-
+            {/* Gaming Highlights with videos */}
         <div className="gaming-highlights">
           <h1>Gaming Highlights</h1>
           <div className="video-container">
@@ -178,11 +244,11 @@ const Account = () => {
               <video src="path/to/video1.mp4" controls></video>
             </div>
             <div className="video-clip">
-              <video src="path/to/video2.mp4" controls></video>
+              <video src="../../assets/Gamingclip/Gameclip1.mp4" controls></video>
             </div>
           </div>
 
-          
+           {/* Consoles scroll bar */}
           <div className="interests-barConsoles">
             <h1>Consoles</h1>
           <div className="interests-containerConsoles">
@@ -194,7 +260,7 @@ const Account = () => {
             ))}
           </div>
 
-          
+           {/* Gaming Interests scroll bar*/}
     <div className="interests-barGaming">
       <h1>Gaming Interests</h1>
       <div className="interests-containerGaming">
@@ -204,6 +270,7 @@ const Account = () => {
           </div>
         ))}
       </div>
+       {/* What I play section */}
       <div className="game-titles">
   <h1>What I Play</h1>
   <div>
@@ -216,10 +283,7 @@ const Account = () => {
     </div>
   </div>
 
-  <div className="actions">
-    <button className="pass">Pass</button>
-    <button className="like">Like</button>
-  </div>
+ 
 </div>
         </div>
       </div>

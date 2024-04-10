@@ -1,5 +1,5 @@
 .settings-icon {
-  margin-left: 200px; /* Adjust the margin as needed */
+  margin-left: 400px; 
   width: 30px;
   height: 30px;
 }
@@ -7,9 +7,9 @@
 .profile-container {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center the profile container */
+  align-items: center; 
   text-align: center;
-  margin-top: 20px; /* Add margin at the top to move it down */
+  margin-top: 20px; 
 }
 .profile-info {
   text-align: center;
@@ -42,25 +42,25 @@
 
 .logo-container {
   display: flex;
-  flex-direction: column; /* Adjust to column layout */
+  flex-direction: column; 
   align-items: center;
-  margin-bottom: 20px; /* Add margin at the bottom to move it down */
+  margin-bottom: 20px; 
 }
 
 .logo2 {
   width: 50px;
   height: 50px;
-  margin-bottom: 10px; /* Adjust the margin as needed */
+  margin-bottom: 10px; 
 }
 
 .logo-container h1 {
-  margin: 0; /* Remove default margin */
-  line-height: 1.2; /* Adjust line-height as needed */
+  margin: 0; 
+  line-height: 1.2; 
 }
 
 .logo-container h2 {
-  margin: 0; /* Remove default margin */
-  line-height: 1.5; /* Adjust line-height as needed */
+  margin: 0; 
+  line-height: 1.5; 
   text-align: center;
 }
 
@@ -69,6 +69,7 @@ width: 100%;
 overflow-x: auto;
 white-space: nowrap;
 margin-top: -50px;
+;
 }
 
 .interests-bar {
@@ -83,12 +84,13 @@ padding: 10px;
 }
 
 .interest-item {
-background-color: #f0f0f0;
-padding: 5px 10px;
-border-radius: 20px;
-margin-right: 10px;
-font-size: 14px;
-color:black;
+  background-color: transparent;
+  padding: 5px 10px;
+  border: 1px solid var(--liBlue); /* Change to your desired color */
+  border-radius: 20px;
+  margin-right: 10px;
+  font-size: 14px;
+  color: var(--liBlue);
 }
 
 .gaming-highlights {
@@ -133,7 +135,14 @@ padding: 10px;
 }
 
   .game-art {
-    width: 150px; /* Adjust as needed */
-    height: 150px; /* Adjust as needed */
+    width: 150px; 
+    height: 200px; 
     object-fit: cover;
+    padding: 7px;
+  }
+
+  .interest-icon {
+    fill: red; /* Replace with your desired color */
+    width: 20px; 
+    height: 20px; 
   }
