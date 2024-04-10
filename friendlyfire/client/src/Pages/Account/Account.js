@@ -22,6 +22,9 @@ import smokeIcon from '../../assets/Icons/smoking.svg';
 import marijuanaIcon from '../../assets/Icons/marijuana.svg';
 import childrenIcon from '../../assets/Icons/stuffedtoy.svg';
 import workoutIcon from '../../assets/Icons/dumbbell.svg';
+import gameClip1 from '../../assets/Gamingclip/Gameclip1.mp4';
+import gameClip2 from '../../assets/Gamingclip/Gameclip2.mp4';
+
 
 // array for profile pictures, interests, lifestyle, consoles, gaming interests, and game images
 const images = [placeholderImage1, placeholderImage2, placeholderImage3];
@@ -187,17 +190,18 @@ const Account = () => {
           <h3> 5 Miles aways</h3>
           {showBio ? (
             <p>
-              Love hiking and outdoor adventures. {'\n'}
-              Avid reader and aspiring novelist. {'\n'}
-              Coffee lover and foodie at heart. {'\n'}
-              Looking for someone to share life's adventures with.
+              
+             Not your eSports champion but I've logged {'\n'}
+              serious hours on Valorant. When not working or {'\n'}
+              gaming ,catch me on a Netflix binge or attempting {'\n'}
+              to cook something that looks edible.
             </p>
           ) : (
             <p>
-              Love hiking and outdoor adventures. {'\n'}
-              <span className="see-more" onClick={() => setShowBio(true)}>
-                See more
-              </span>
+              Not your eSports champion. {'\n'}
+              <span className="see-more" onClick={() => setShowBio(true)} style={{fontWeight: 'bold'}}>
+  See more
+</span>
             </p>
           )}
           {/* Lifestyle scroll bar */}
@@ -241,10 +245,10 @@ const Account = () => {
           <h1>Gaming Highlights</h1>
           <div className="video-container">
             <div className="video-clip">
-              <video src="path/to/video1.mp4" controls></video>
+              <video src={gameClip2} controls></video>
             </div>
             <div className="video-clip">
-              <video src="../../assets/Gamingclip/Gameclip1.mp4" controls></video>
+            <video src={gameClip1} controls></video>
             </div>
           </div>
 
