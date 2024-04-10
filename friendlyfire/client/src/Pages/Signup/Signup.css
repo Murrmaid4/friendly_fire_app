@@ -14,14 +14,15 @@ body {
   text-align: center;
 }
 
-h1{
-  color: #F4F4F4;
+.signup{
+  color: var(--white);
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
   line-height: 120%;
   text-align: left;
   margin-bottom: 30px;
+  margin-top: 20px;
 }
 
 input {
@@ -32,13 +33,13 @@ input {
   align-items: center;
   flex-shrink: 0;
   border-radius: 12px;
-  border: 1px solid var(--Grey-500, #9E9E9E);
-  background: var(--Grey-200, #f5f5f5);
+  border: 1px solid #9E9E9E;
+  background: #f5f5f5;
   margin-top: 4px;
 }
 
 input::placeholder{
-  color: var(--Grey-500, #9E9E9E);
+  color: #9E9E9E;
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
@@ -48,7 +49,7 @@ input::placeholder{
 
 
 input:focus {
-  outline: 2px solid var(--Rose, #F20C8B);
+  outline: 2px solid var(--pink);
 }
 
 #signup {
@@ -61,7 +62,7 @@ input:focus {
 }
 
 .signup-text{
-  color: #F4F4F4;
+  color: var(--white);
   text-align: center;
   font-size: 15px;
   font-style: normal;
@@ -72,7 +73,7 @@ input:focus {
 }
 
 label {
-  color: #f4f4f4;
+  color: var(--white);
   font-size: 15px;
   font-style: normal;
   font-weight: 700;
@@ -80,7 +81,7 @@ label {
 }
 
 .or {
-  color: #f4f4f4;
+  color: var(--white);
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
@@ -95,7 +96,7 @@ label {
   display: block;
   height: 1px;
   width: 156px; /* Adjust this value to control the length of the lines */
-  background: #f4f4f4;
+  background: var(--white);
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -135,7 +136,7 @@ label {
 }
 
 .question{
-  color: #f4f4f4;
+  color: var(--white);
   text-align: center;
   font-size: 20px;
   font-style: normal;
@@ -146,7 +147,7 @@ label {
 }
 
 .login{
-  color: var(--Bright-Turquoise, #1df2dd);
+  color: var(--liBlue);
   font-size: 20px;
   font-style: normal;
   font-weight: 800;
