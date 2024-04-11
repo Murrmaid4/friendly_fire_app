@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./Messages.css";
 import { MongoClient } from "mongodb";
+const uri = "mongodb+srv://pritchettb14:friendlyfire@cluster0.bzxi0yi.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+
 
 const Messages = () => {
   const [messages, setMessages] = useState([]);
