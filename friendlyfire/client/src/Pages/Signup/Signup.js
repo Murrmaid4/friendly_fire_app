@@ -25,8 +25,7 @@ const Signup = () => {
     e.preventDefault();}
 
     return (
-      <div>
-       
+      <div >
         <div className="logo-container">{/* div for logo */}
           <img src={Logo} alt="friendlyfire app logo" className="logo"/>
         </div>
@@ -71,16 +70,16 @@ const Signup = () => {
           </form>
         </div>
 
-      <div>
-        {/* Or divider div (check figma, may be able to export css from there for this) */}
-        <p className="or">or</p>
-      </div>
-{/* this is the button that will be connecting to google api, just css on button for now */}
-      <button type="submit" className="google"> Sign up with Google</button>
-      <div className="account-question">
-        <p className="question">Already a Member?</p>
-        <a href="github.com/murrmaid4" className="login">Login</a></div>
-    {/* will have this link to login page eventually(in back end phase) */}
+        <div>
+          {/* Or divider div (check figma, may be able to export css from there for this) */}
+          <p className="or">or</p>
+        </div>
+        {/* this is the button that will be connecting to google api, just css on button for now */}
+        <button type="submit" className="google"> Sign up with Google</button>
+         <div className="account-question">
+         <p className="question">Already a Member?</p>
+         <a href="github.com/murrmaid4" className="login">Login</a></div>
+         {/* will have this link to login page eventually(in back end phase) */}
    
 
       </div>
