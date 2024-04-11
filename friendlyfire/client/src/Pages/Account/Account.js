@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import Logo2 from '../../assets/logo.svg';
+//import Logo2 from '../../assets/logo.svg';
 import { Link } from 'react-router-dom';
 import SettingsIcon from '../../assets/setting.svg';
 import './Account.css';
@@ -40,7 +40,7 @@ const Account = () => {
   const aspectRatio = 3 / 4;
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const dragStartX = useRef(null);
-  const [width, setWidth] = useState(450);
+  const [width, setWidth] = useState(395);
   const [height, setHeight] = useState(width / aspectRatio);
   const [showBio, setShowBio] = useState(false);
 
@@ -192,9 +192,9 @@ const Account = () => {
             <p>
               
              Not your eSports champion but I've logged 
-              serious hours on {'\n'} Valorant.  When not working or 
-              gaming ,catch me on a Netflix {'\n'} binge or attempting  
-              to cook something that looks edible.
+              serious {'\n'}hours on  Valorant.  When not working or 
+              gaming,{'\n'}catch me on a Netflix binge  or attempting  
+              to cook {'\n'} something that looks edible.
             </p>
           ) : (
             <p>
