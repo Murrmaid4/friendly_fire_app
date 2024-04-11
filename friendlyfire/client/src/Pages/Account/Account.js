@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import Logo2 from '../../assets/logo.svg';
+//import Logo2 from '../../assets/logo.svg';
 import { Link } from 'react-router-dom';
 import SettingsIcon from '../../assets/setting.svg';
 import './Account.css';
@@ -40,7 +40,7 @@ const Account = () => {
   const aspectRatio = 3 / 4;
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const dragStartX = useRef(null);
-  const [width, setWidth] = useState(250);
+  const [width, setWidth] = useState(395);
   const [height, setHeight] = useState(width / aspectRatio);
   const [showBio, setShowBio] = useState(false);
 
@@ -107,7 +107,7 @@ const Account = () => {
   }, [width, aspectRatio]);
 //settings icon linked to settings page
   return (
-    <div>
+    <div className='account-root'>
       <div className="settings-icon">
         <Link to="/settings" className="settings-icon-link">
           <div className="settings-icon-container">
@@ -120,9 +120,9 @@ const Account = () => {
         </Link>
       </div>
 {/* Logo and title of the app */}
-      <div className="logo-container">
-        <img src={Logo2} alt="friendlyfire app logo" className="logo" style={{ width: '50px', height: '50px' }} />
-        <h1>FriendlyFire</h1>
+      <div className="logo-container  custom-font">
+        {/*<img src={Logo2} alt="friendlyfire app logo" className="logo" style={{ width: '50px', height: '50px' }} /> */}
+       {/* <h1>FriendlyFire</h1> */}
         <h2>My Character Sheet</h2>
       </div>
 {/*Profile Picture and swipe functionality */}
@@ -144,7 +144,7 @@ const Account = () => {
           />
         </div>
 {/* Interests scroll bar */}
-        <div className="interests-bar">
+        <div className="interests-barTop">
           <div className="interests-container">
             {interests.map((interest, index) => {
               let Icon;
@@ -175,7 +175,7 @@ const Account = () => {
                   Icon = null;
               }
               return (
-                <div key={index} className="interest-item">
+                <div key={index} className="interest-item  custom-font">
                   {Icon && <img src={Icon} alt={interest} className="interest-icon" />}
                   {interest}
                 </div>
@@ -187,14 +187,14 @@ const Account = () => {
 {/* Profile information */}
         <div className="profile-info">
           <h1>Jane Doe, 24 </h1>
-          <h3> 5 Miles aways</h3>
+          <h3> 5 Miles away</h3>
           {showBio ? (
             <p>
               
-             Not your eSports champion but I've logged {'\n'}
-              serious hours on Valorant. When not working or {'\n'}
-              gaming ,catch me on a Netflix binge or attempting {'\n'}
-              to cook something that looks edible.
+             Not your eSports champion but I've logged 
+              serious {'\n'}hours on  Valorant.  When not working or 
+              gaming,{'\n'}catch me on a Netflix binge  or attempting  
+              to cook {'\n'} something that looks edible.
             </p>
           ) : (
             <p>
@@ -205,9 +205,11 @@ const Account = () => {
             </p>
           )}
           {/* Lifestyle scroll bar */}
-           <h1>Lifestyle</h1>
+          <div className="lifestyle-title">
+              <h2>Lifestyle</h2>
+           </div>
           <div className="interests-barLifestyle">
-          <div className="interests-container">
+          <div className="interests-containerLifestyle">
            
             {lifestyle.map((lifestyle, index) => {
               let Icon;
@@ -231,7 +233,7 @@ const Account = () => {
                   Icon = null;
               }
               return (
-              <div key={index} className="interest-item">
+              <div key={index} className="interest-item  custom-font">
                 {Icon && <img src={Icon} alt={lifestyle} className="interest-icon" />}
                 {lifestyle}
               </div>
@@ -239,10 +241,12 @@ const Account = () => {
             })}
           </div>
         </div>
-       
-            {/* Gaming Highlights with videos */}
+       {/* Gaming Highlights with videos */}
+       <div className="lifestyle-title">
+              <h2>Gaming Highlights</h2>
+           </div>
         <div className="gaming-highlights">
-          <h1>Gaming Highlights</h1>
+         
           <div className="video-container">
             <div className="video-clip">
               <video src={gameClip2} controls></video>
@@ -253,30 +257,39 @@ const Account = () => {
           </div>
 
            {/* Consoles scroll bar */}
+           <div className="lifestyle-title">
+              <h2>Consoles</h2>
+           </div>
           <div className="interests-barConsoles">
-            <h1>Consoles</h1>
+            
           <div className="interests-containerConsoles">
            
             {consoles.map((consoles, index) => (
-              <div key={index} className="interest-item">
+              <div key={index} className="interest-item  custom-font">
                 {consoles}
               </div>
             ))}
           </div>
 
            {/* Gaming Interests scroll bar*/}
+           <div className="lifestyle-title">
+              <h2>Gaming Interests</h2>
+           </div>
     <div className="interests-barGaming">
-      <h1>Gaming Interests</h1>
+      
       <div className="interests-containerGaming">
         {gaminginterests.map((gaminginterest, index) => (
-          <div key={index} className="interest-item">
+          <div key={index} className="interest-item  custom-font">
             {gaminginterest}
           </div>
         ))}
       </div>
        {/* What I play section */}
+       <div className="lifestyle-title">
+              <h2>What I Play </h2>
+           </div>
       <div className="game-titles">
-  <h1>What I Play</h1>
+
   <div>
     {gameImages.map((image, index) => (
       <img key={index} src={image} alt="Game Art" className="game-art" />
@@ -292,6 +305,7 @@ const Account = () => {
         </div>
       </div>
     </div>
+    
   );
 }
 

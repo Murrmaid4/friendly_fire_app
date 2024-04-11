@@ -12,14 +12,14 @@ import Messages from "./Pages/Messages/Messages";
 function App() {
   return (
     <Router>
-   <Routes>
-    {/* <Route path="/" element={<Signup/> }/> */}
-    {/* <Route path="/account" element={<Account/> }/> */}
-    {/* <Route path="/signup" element={<Registration/> }/> */}
-    {/* <Route path="/matches" element={<Matches/> }/> */}
-    {/* <Route path="/settings" element={<Settings/> }/> */}
-    <Route path="/messages" element={<Messages/> }/>
-   </Routes>
+      <Routes>
+        <Route path="/" element={<Signup/> }/> 
+        <Route path="/account" element={<Account/> }/> 
+        <Route path="/signup" element={<Registration/> }/>
+        <Route path="/matches" element={<Matches/> }/> 
+        <Route path="/settings" element={<Settings/> }/> 
+        <Route path="/messages" element={<Messages/> }/>
+      </Routes>
     </Router>
   );
 }
