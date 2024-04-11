@@ -40,7 +40,7 @@ const Account = () => {
   const aspectRatio = 3 / 4;
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const dragStartX = useRef(null);
-  const [width, setWidth] = useState(500);
+  const [width, setWidth] = useState(450);
   const [height, setHeight] = useState(width / aspectRatio);
   const [showBio, setShowBio] = useState(false);
 
@@ -192,8 +192,8 @@ const Account = () => {
             <p>
               
              Not your eSports champion but I've logged 
-              serious hours on Valorant. {'\n'} When not working or 
-              gaming ,catch me on a Netflix binge or attempting  {'\n'}
+              serious hours on {'\n'} Valorant.  When not working or 
+              gaming ,catch me on a Netflix {'\n'} binge or attempting  
               to cook something that looks edible.
             </p>
           ) : (

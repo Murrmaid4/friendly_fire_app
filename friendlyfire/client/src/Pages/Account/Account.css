@@ -1,5 +1,6 @@
 .settings-icon {
-  margin-left: 610px; 
+  margin-left: 610px;
+  margin-top: 30px;
   width: 30px;
   height: 30px;
 }
@@ -191,8 +192,8 @@ padding-left: 700px;
 }
 
   .game-art {
-    width: 150px; 
-    height: 200px; 
+    width: 200px; 
+    height: 250px; 
     object-fit: cover;
     padding: 7px;
    
@@ -216,6 +217,6 @@ padding-left: 700px;
     flex-direction: column;
     align-items: left;
     justify-content: left;
-    padding-left: 400px; 
+    padding-left: 650px; 
     
   }
