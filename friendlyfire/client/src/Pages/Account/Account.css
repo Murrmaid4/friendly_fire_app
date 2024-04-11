@@ -1,5 +1,6 @@
+
 .settings-icon {
-  margin-left: 400px; 
+  margin-left: 380px; 
   width: 30px;
   height: 30px;
 }
@@ -7,9 +8,11 @@
 .profile-container {
   display: flex;
   flex-direction: column;
-  align-items: center; 
+  align-items: left; /* align items to the start */
   text-align: center;
   margin-top: 20px; 
+  
+  
 }
 .profile-info {
   text-align: center;
@@ -20,30 +23,58 @@
 
 .profile-pictures {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start; /* align items to the top */
+
 }
+
+.current-profile-picture {
+  margin-left: 260px; 
+}
+
 .profile-info p {
  font-size: 15px;
+ font-family: OnestRegular;
+ text-align: left;
+ padding-left: 260px
  
+}
+
+.logo-container h1{
+  font-family: OnestRegular;
+  padding-left: 260px;
+}
+
+.logo-container h2{
+  text-align: left;
+  padding-left: 300px;
+  font-size: 25px;
+  font-family: OnestRegular;
+  padding-left: 260px;
 }
 
 .profile-info h1 {
   margin-top: 10px;
   line-height: -0.10;
+  text-align: left;
+  padding-left: 260px;
+  font-family: OnestRegular;
 }
 
 .profile-info h3 {
   margin-top: -50px;
   font-size: 15px;
   color: #f0f0f0;
+  text-align: left;
+  padding-left: 260px;
+  font-family: OnestRegular;
 }
 
 
 .logo-container {
   display: flex;
   flex-direction: column; 
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: 20px; 
 }
 
@@ -68,22 +99,29 @@
 width: 100%;
 overflow-x: auto;
 white-space: nowrap;
-margin-top: -50px;
+margin-top: 10px;
 ;
 }
-
-.interests-bar {
+.lifestyle-title{
+  font-size: 20px;
+  text-align: left;
+  padding-left: 260px;
+}
+.interests-barTop {
 width: 100%;
 overflow-x: auto;
 white-space: nowrap;
+
 }
 
 .interests-container {
 display: flex;
 padding: 10px;
 display: flex;
-  justify-content: center;
-align-items: center;
+justify-content: left;
+align-items: left;
+padding-left: 260px;
+
 }
 
 .interest-item {
@@ -94,6 +132,7 @@ align-items: center;
   margin-right: 10px;
   font-size: 14px;
   color: var(--liBlue);
+ 
   
   
 }
@@ -105,11 +144,13 @@ align-items: center;
 
 .video-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: left;
+  align-items: left;
+  padding-left: 250px;
 }
 
 .video-clip {
-  width: 48%;
+  width: 38%;
 }
 
 .video-clip video {
@@ -119,28 +160,36 @@ align-items: center;
 
 .gaming-highlights {
   margin-top: 15px;
-  color: #f0f0f0;
+  color: var(--white);
   font-size: 20px;
+  padding-left: 10px;
 }
 
 .interests-barConsoles {
-  margin-top: 20px;
+  margin-top: 5px;
 }
 
 .interests-containerConsoles{
-  margin-top: -50px;
+  margin-top: 5px;
   display: flex;
-padding: 10px;
-  justify-content: center;
-  align-items: center;
+  padding-left: 260px;
+  justify-content: left;
+  align-items: left;
+}
+.interests-containerLifestyle{
+  margin-top: 5px;
+  display: flex;
+  padding-left: 260px;
+  justify-content: left;
+  align-items: left;
 }
 
 .interests-containerGaming {
-  margin-top: -45px;
+  margin-top: 5px;
+  padding-left: 260px;
   display: flex;
-  padding: 10px;
-  justify-content: center;
-  align-items: center;
+  justify-content: left;
+  align-items: left;
 }
 
   .game-art {
@@ -148,6 +197,7 @@ padding: 10px;
     height: 200px; 
     object-fit: cover;
     padding: 7px;
+   
   }
 
   .interest-icon {
@@ -156,8 +206,18 @@ padding: 10px;
     margin-bottom: -5px;
   }
 
+  .custom-font {
+    font-family: OnestRegular;
+  }
+
   .game-titles {
     font-size: 15px;
-    color: #f0f0f0;
+    color: var(--white);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    padding-left: 20px; /* adjust this value to your liking */
     
   }
