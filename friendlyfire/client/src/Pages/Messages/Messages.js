@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import "./Messages.css";
 
 import BackButton from "../../assets/Icons/back.svg"
@@ -36,10 +37,13 @@ const Messages = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (newMessage.trim() === "") return;
-
+  
     try {
       await axios.post("/message", { message: newMessage });
-
+    } catch (error) {
+      console.error(error);
+    }
+  };
  
 
   return (
