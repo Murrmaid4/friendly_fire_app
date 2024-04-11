@@ -1,6 +1,5 @@
-
 .settings-icon {
-  margin-left: 380px; 
+  margin-left: 610px; 
   width: 30px;
   height: 30px;
 }
@@ -29,35 +28,35 @@
 }
 
 .current-profile-picture {
-  margin-left: 260px; 
+  margin-left: 700px; 
 }
 
 .profile-info p {
  font-size: 15px;
  font-family: OnestRegular;
  text-align: left;
- padding-left: 260px
+ padding-left: 700px;
  
 }
 
 .logo-container h1{
   font-family: OnestRegular;
-  padding-left: 260px;
+  padding-left: 700px;
 }
 
 .logo-container h2{
   text-align: left;
-  padding-left: 300px;
+  
   font-size: 25px;
   font-family: OnestRegular;
-  padding-left: 260px;
+  padding-left: 700px;
 }
 
 .profile-info h1 {
   margin-top: 10px;
   line-height: -0.10;
   text-align: left;
-  padding-left: 260px;
+  padding-left: 700px;
   font-family: OnestRegular;
 }
 
@@ -66,7 +65,7 @@
   font-size: 15px;
   color: #f0f0f0;
   text-align: left;
-  padding-left: 260px;
+  padding-left: 700px;
   font-family: OnestRegular;
 }
 
@@ -105,7 +104,7 @@ margin-top: 10px;
 .lifestyle-title{
   font-size: 20px;
   text-align: left;
-  padding-left: 260px;
+  padding-left: 700px;
 }
 .interests-barTop {
 width: 100%;
@@ -120,7 +119,7 @@ padding: 10px;
 display: flex;
 justify-content: left;
 align-items: left;
-padding-left: 260px;
+padding-left: 700px;
 
 }
 
@@ -132,8 +131,6 @@ padding-left: 260px;
   margin-right: 10px;
   font-size: 14px;
   color: var(--liBlue);
- 
-  
   
 }
 
@@ -146,11 +143,12 @@ padding-left: 260px;
   display: flex;
   justify-content: left;
   align-items: left;
-  padding-left: 250px;
+  padding-left: 700px;
 }
 
 .video-clip {
-  width: 38%;
+  width: 44%;
+  margin: 0 10px;
 }
 
 .video-clip video {
@@ -162,7 +160,7 @@ padding-left: 260px;
   margin-top: 15px;
   color: var(--white);
   font-size: 20px;
-  padding-left: 10px;
+  padding-right: 15px;
 }
 
 .interests-barConsoles {
@@ -172,21 +170,21 @@ padding-left: 260px;
 .interests-containerConsoles{
   margin-top: 5px;
   display: flex;
-  padding-left: 260px;
+  padding-left: 700px;
   justify-content: left;
   align-items: left;
 }
 .interests-containerLifestyle{
   margin-top: 5px;
   display: flex;
-  padding-left: 260px;
+  padding-left: 700px;
   justify-content: left;
   align-items: left;
 }
 
 .interests-containerGaming {
   margin-top: 5px;
-  padding-left: 260px;
+  padding-left: 700px;
   display: flex;
   justify-content: left;
   align-items: left;
@@ -218,6 +216,6 @@ padding-left: 260px;
     flex-direction: column;
     align-items: left;
     justify-content: left;
-    padding-left: 20px; /* adjust this value to your liking */
+    padding-left: 400px; 
     
   }

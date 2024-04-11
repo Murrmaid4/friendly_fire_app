@@ -40,7 +40,7 @@ const Account = () => {
   const aspectRatio = 3 / 4;
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const dragStartX = useRef(null);
-  const [width, setWidth] = useState(300);
+  const [width, setWidth] = useState(500);
   const [height, setHeight] = useState(width / aspectRatio);
   const [showBio, setShowBio] = useState(false);
 
@@ -187,7 +187,7 @@ const Account = () => {
 {/* Profile information */}
         <div className="profile-info">
           <h1>Jane Doe, 24 </h1>
-          <h3> 5 Miles aways</h3>
+          <h3> 5 Miles away</h3>
           {showBio ? (
             <p>
               
