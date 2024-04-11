@@ -4,6 +4,9 @@ body {
   justify-content: center;
   align-items: center;
   padding: 10px;
+  margin-left: 20px !important;
+  margin-right: 20px !important;
+
 }
 
 .logo{
