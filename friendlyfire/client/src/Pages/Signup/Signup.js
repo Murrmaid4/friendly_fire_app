@@ -8,9 +8,12 @@ const Signup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  // this is how we'll grab email and password information 
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
+
+  // here's where email will be stored 
   };
 
   const handlePasswordChange = (e) => {
