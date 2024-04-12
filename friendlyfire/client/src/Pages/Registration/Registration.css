@@ -8,14 +8,6 @@
   margin-right: 20px !important;
 } */
 
-.scrollable-container {
-  max-height: 500px; 
-  overflow-y: auto; 
-  overflow-x: hidden; 
-}
-
-
-
 h1{
   color: var(--white);
   text-align: center;
@@ -43,7 +35,7 @@ h2{
   line-height: 130%;
 }
 
-.step1-input, .step4-input {
+.step1-input {
   display: flex;
   color: var(--text-input);
   font-size: 15px;
@@ -87,19 +79,40 @@ h2{
   outline: 2px solid var(--pink);
 }
 
-
+.step4-input {
+  display: flex;
+  color: var(--text-input);
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  width: 353px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 12px;
+  border: 2px solid var(--black-rock-overlay);
+  background: none;
+  margin-top: 20px;
+  margin-bottom: 52px;
+  padding-left: 10px; 
+}
 
 .step4-input::placeholder{
   color: var(--text-input);
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
-  line-height: 120%;
-  padding-left: 10px;
+  line-height: 120%; /* 18px */
 }
 
 .step4-input:focus {
   outline: 2px solid var(--pink);
+}
+
+.location-label {
+
 }
 
 /*base styles for both buttons*/
@@ -156,9 +169,6 @@ h2{
   .previous-button {
     bottom: 80px;
   }
-  .scrollable-container {
-    max-height: 430px; 
-  }
 }
 
 @media only screen and (min-width: 1025px) {
@@ -170,10 +180,6 @@ h2{
   }
   .previous-button {
     bottom: 80px;
-  }
-
-  .scrollable-container {
-    max-height: 440px; 
   }
 }
 
@@ -218,65 +224,13 @@ h2{
   font-weight: 400;
   line-height: normal;
   letter-spacing: -0.5px;
-  color: var(--white);
 }
 
-.toggle-container {
+.toggle-container{
   display: flex;
-  align-items: center; /* This will vertically center align the label and toggle */
-  justify-content: space-between;
+
   margin-top: 20px;
 }
-
-.profile-question {
-  margin-right: 20px; /* Space between the label and the toggle */
-}
-
-.switch {
-  position: relative;
-  display: inline-block; /* Makes the label for the toggle act like a block but flow like an inline element */
-  width: 60px; /* Width of the switch */
-  height: 34px; /* Height of the switch */
-}
-
-.switch input {
-  opacity: 0; /* Hides the checkbox but allows it to still be clickable */
-  width: 0;
-  height: 0;
-}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: var(--black-rock-overlay);
-  transition: .4s;
-  border-radius: 34px;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: var(--white);
-  transition: .4s;
-  border-radius: 50%;
-}
-
-input:checked + .slider {
-  background-color: var(--darBlue);
-}
-
-input:checked + .slider:before {
-  transform: translateX(26px);
-}
-
 
 .checkbox-container{
   display: flex;
@@ -289,7 +243,6 @@ input:checked + .slider:before {
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
-  color: var(--white);
   line-height: normal;
   width: 300px;
 }
@@ -321,15 +274,9 @@ p{
   padding-bottom: 20px;
 }
 
-.location-label{
-  color: var(--white);
-}
-
 .mode-button-container {
   display: flex;
-  justify-content: center; /* This will center the buttons horizontally */
   margin-top: 80px;
-  flex-wrap: wrap; /* Ensures buttons wrap to the next line if the container is too narrow */
 }
 
 .mode-button {
@@ -338,18 +285,13 @@ p{
   align-items: center;
   justify-content: center;
   margin-right: 20px; /* Adjust spacing between buttons */
-  margin-bottom: 20px; /* Adds spacing between rows when wrapped */
   width: 138px;
   height: 178px;
   background-color: var(--black-rock-overlay);
   border: none;
   border-radius: 8px;
   color: var(--white);
-}
 
-/* Additional style to remove margin from the last button */
-.mode-button:last-child {
-  margin-right: 0;
 }
 
 .mode-button:focus{
@@ -369,7 +311,7 @@ p{
 }
 
 .custom-select{
-  width: 100%;
+  width: 353px;
   height: 40px;
   flex-shrink: 0;
   border-radius: 12px;

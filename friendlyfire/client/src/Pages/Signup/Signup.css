@@ -1,15 +1,10 @@
 
-.logo {
-  margin-top: 30px;  
-  display: block;    
-  margin-left: auto; 
-  margin-right: auto;
+.logo{
+  margin-top: 30px;
 }
 
-.logo-container {
-  display: flex;        
-  align-items: center;    
-  justify-content: center;
+.logo-container{
+  text-align: center;
 }
 
 .signup{
