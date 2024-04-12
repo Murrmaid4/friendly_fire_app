@@ -1,26 +1,42 @@
 import "./App.css";
-import { BrowserRouter as Router,Routes, Route } from "react-router-dom";
-// import React, { useState } from "react";
-import Signup from './Pages/Signup/Signup';
-import Account from './Pages/Account/Account';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
+import Signup from "./Pages/Signup/Signup";
+import Account from "./Pages/Account/Account";
 import Registration from "./Pages/Registration/Registration";
 import Matches from "./Pages/Matches/Matches";
 import Settings from "./Pages/Settings/Settings";
 import Messages from "./Pages/Messages/Messages";
-
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<Signup/> }/> 
-        <Route path="/account" element={<Account/> }/> 
-        <Route path="/signup" element={<Registration/> }/>
-        <Route path="/matches" element={<Matches/> }/> 
-        <Route path="/settings" element={<Settings/> }/> 
-        <Route path="/messages" element={<Messages/> }/>
-      </Routes>
+      <AppContent />
     </Router>
+  );
+}
+
+function AppContent() {
+  const location = useLocation();
+  const showFooter = !["/", "/signup"].includes(location.pathname);
+
+  return (
+    <>
+      <Routes>
+        <Route path="/" element={<Signup />} />
+        <Route path="/account" element={<Account />} />
+        <Route path="/signup" element={<Registration />} />
+        <Route path="/matches" element={<Matches />} />
+        <Route path="/settings" element={<Settings />} />
+        <Route path="/messages" element={<Messages />} />
+      </Routes>
+      {showFooter && <Footer />}
+    </>
   );
 }
 
