@@ -26,7 +26,7 @@ const Signup = () => {
   };
 
     return (
-      <div >
+      <div className="sign-up-body">
         <div className="logo-container">{/* div for logo */}
           <img src={Logo} alt="friendlyfire app logo" className="logo"/>
         </div>

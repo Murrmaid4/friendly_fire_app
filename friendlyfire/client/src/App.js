@@ -1,8 +1,12 @@
 import "./App.css";
-import { BrowserRouter as Router,Routes, Route } from "react-router-dom";
-// import React, { useState } from "react";
-import Signup from './Pages/Signup/Signup';
-import Account from './Pages/Account/Account';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
+import Signup from "./Pages/Signup/Signup";
+import Account from "./Pages/Account/Account";
 import Registration from "./Pages/Registration/Registration";
 import Matches from "./Pages/Matches/Matches";
 import Settings from "./Pages/Settings/Settings";
@@ -10,10 +14,24 @@ import Messages from "./Pages/Messages/Messages";
 import Login from "./Pages/Login/Login";
 
 
+import Footer from "./Components/Footer/Footer";
+
 function App() {
   return (
     <Router>
+      <AppContent />
+    </Router>
+  );
+}
+
+function AppContent() {
+  const location = useLocation();
+  const showFooter = !["/", "/signup"].includes(location.pathname);
+
+  return (
+    <>
       <Routes>
+
         <Route path="/" element={<Signup/> }/> 
         <Route path="/login" element={<Login/> }/> 
         <Route path="/account" element={<Account/> }/> 
@@ -21,8 +39,10 @@ function App() {
         <Route path="/matches" element={<Matches/> }/> 
         <Route path="/settings" element={<Settings/> }/> 
         <Route path="/messages" element={<Messages/> }/>
+
       </Routes>
-    </Router>
+      {showFooter && <Footer />}
+    </>
   );
 }
 
