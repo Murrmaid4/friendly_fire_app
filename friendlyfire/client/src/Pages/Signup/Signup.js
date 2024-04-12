@@ -2,30 +2,28 @@ import React from "react";
 import Logo from '../../assets/signuplogo.svg';
 import {useState} from 'react'
 import "./Signup.css";
+import axios from 'axios';
 
 
 const Signup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
+
   // this is how we'll grab email and password information 
 
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value);
-
-  // here's where email will be stored 
+ 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    console.log("Clicked!")
+    try {
+      const response = await axios.post('http://localhost:8000/signup', { email, password });
+      console.log(response.data); // Assuming response contains token and userId
+      // Handle successful signup, e.g., redirect to dashboard
+    } catch (error) {
+      console.error('Signup failed:', error.response.data);
+      // Handle signup error, e.g., display error message to user
+    }
   };
-
-  const handlePasswordChange = (e) => {
-    setPassword(e.target.value);
-  };
-
-  const handleConfirmPasswordChange = (e) => {
-    setConfirmPassword(e.target.value);
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();}
 
     return (
       <div >
@@ -35,14 +33,15 @@ const Signup = () => {
         <h1 className="signup">Sign Up</h1>
         
         <div>
-          <form>
+          <form onSubmit={handleSubmit}>
             <label>
               Email:
               <input
                 type="email"
                 placeholder="Enter-E-mail"
                 value={email}
-                onChange={handleEmailChange}
+                onChange={(e) => setEmail(e.target.value)}
+                
                 required
               />
             </label>
@@ -53,12 +52,12 @@ const Signup = () => {
                 type="password"
                 placeholder="Enter Password"
                 value={password}
-                onChange={handlePasswordChange}
+                onChange={(e) => setPassword(e.target.value)}
                 required
               />
             </label>
             <br />
-            <label>
+            {/* <label>
               Confirm Password:
               <input
                 type="password"
@@ -67,7 +66,7 @@ const Signup = () => {
                 onChange={handleConfirmPasswordChange}
                 required
               />
-            </label>
+            </label> */}
             <br />
             <button id="signup" type="submit" className="signup-text">Sign Up</button>
           </form>

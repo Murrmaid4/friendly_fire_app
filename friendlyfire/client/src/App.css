@@ -92,3 +92,7 @@
   transform: translateX(-50%)
 
 }
+
+button{
+  cursor: pointer;
+}

@@ -7,6 +7,7 @@ import Registration from "./Pages/Registration/Registration";
 import Matches from "./Pages/Matches/Matches";
 import Settings from "./Pages/Settings/Settings";
 import Messages from "./Pages/Messages/Messages";
+import Login from "./Pages/Login/Login";
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Signup/> }/> 
+        <Route path="/login" element={<Login/> }/> 
         <Route path="/account" element={<Account/> }/> 
         <Route path="/signup" element={<Registration/> }/>
         <Route path="/matches" element={<Matches/> }/> 
