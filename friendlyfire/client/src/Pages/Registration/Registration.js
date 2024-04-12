@@ -7,6 +7,7 @@ import "./Registration.css";
 import Toggle from 'react-toggle';
 import DatingIcon from '../../assets/datingicon.svg'
 import FriendsIcon from '../../assets/friendsicon.svg'
+import DeleteIcon from '../../assets/deleteicon.svg'
 
 
 
@@ -187,7 +188,7 @@ const RegistrationPage = () => {
                 <div>
                     <h2>{stepContent.title}</h2>
                     {stepContent.content}
-                    <div>
+                    <div className='step-button-container'>
                         {currentStep > 1 && (
                             <button onClick={handlePrevStep} className='previous-button'>Previous</button>
                         )}
@@ -247,7 +248,7 @@ const RegistrationPage = () => {
                                     <button onClick={() => handleInputChange('genderIdentity', 'Man')} className='identity-button'>
                                         Man
                                     </button>
-                                    <button onClick={() => setShowMoreOptions(!showMoreOptions)} className='identity-button'>
+                                    <button onClick={() => setShowMoreOptions(!showMoreOptions)} className='identity-more-button'>
                                         More
                                     </button>
                                 </div>
@@ -255,19 +256,19 @@ const RegistrationPage = () => {
                                 {/* Additional options when "More" is clicked */}
                                 {showMoreOptions && (
                                     <div>
-                                        <button onClick={() => handleInputChange('genderIdentity', 'Non-Binary')}>
+                                        <button onClick={() => handleInputChange('genderIdentity', 'Non-Binary')} className='identity-button'>
                                             Non-Binary
                                         </button>
-                                        <button onClick={() => handleInputChange('genderIdentity', 'Transgender')}>
+                                        <button onClick={() => handleInputChange('genderIdentity', 'Transgender')} className='identity-button'>
                                             Transgender
                                         </button>
-                                        <button onClick={() => handleInputChange('genderIdentity', 'Trans Man')}>
+                                        <button onClick={() => handleInputChange('genderIdentity', 'Trans Man')} className='identity-button'>
                                             Trans Man
                                         </button>
-                                        <button onClick={() => handleInputChange('genderIdentity', 'Trans Woman')}>
+                                        <button onClick={() => handleInputChange('genderIdentity', 'Trans Woman')} className='identity-button'>
                                             Trans Woman
                                         </button>
-                                        <button onClick={() => handleInputChange('genderIdentity', 'Agender')}>
+                                        <button onClick={() => handleInputChange('genderIdentity', 'Agender')} className='identity-button'>
                                             Agender
                                         </button>
                                     </div>
@@ -576,16 +577,18 @@ const RegistrationPage = () => {
                 };
             case 8:
                 return {
-                    title: "Let's add some photos!",
+                    title: "Let's add some photos !",
                     content: (
                         <div>
-                            <div>
+                            <div className='photos-body'>
                                 <p>Upload at least 4 images of yourself</p>
                                 <div>
                                     {uploadedPhotos.map((photo, index) => (
                                         <div key={index} className="photo-container">
                                             <img src={URL.createObjectURL(photo)} alt={`Uploaded ${index + 1}`} />
-                                            <button onClick={() => handleRemovePhoto(index)}>Remove</button>
+                                            <button onClick={() => handleRemovePhoto(index)}>
+                                                <img src={DeleteIcon} alt="Delete Icon" />
+                                            </button>
                                         </div>
                                     ))}
                                     <label className="photo-container" htmlFor="photo-upload">
@@ -613,8 +616,10 @@ const RegistrationPage = () => {
                                 {uploadedHighlights.map((highlight, index) => (
                                     <div key={index} className="highlight-container">
                                         {/* Display video player or thumbnail */}
-                                        {/* Example: <video src={URL.createObjectURL(highlight)} controls></video> */}
-                                        <button onClick={() => handleRemoveHighlight(index)}>Remove</button>
+                                       <video src={URL.createObjectURL(highlight)} controls></video> 
+                                        <button onClick={() => handleRemoveHighlight(index)}>
+                                            <img src={DeleteIcon} alt="Delete Icon" />
+                                        </button>
                                     </div>
                                 ))}
 

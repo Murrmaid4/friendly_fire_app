@@ -4,8 +4,8 @@ body {
   justify-content: center;
   align-items: center;
   padding: 10px;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 20px !important;
+  margin-right: 20px !important;
 
 }
 
@@ -166,9 +166,11 @@ h2{
   flex-direction: column;
 }
 
-.identity-button{
+.identity-button, .identity-more-button{
   width: 351px;
   height: 66px;
+  display: flex;
+  flex-direction: column;
   flex-shrink: 0;
   border-radius: 8px;
   background: var(--black-rock-overlay);
@@ -178,10 +180,14 @@ h2{
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
-  line-height: normal;
+  line-height: 66px;
   text-align: left;
   padding-left: 30px;
+  align-items: flex-start;
 }
+
+
+
 
 .identity-button:focus{
   background: var(--pink)
@@ -196,6 +202,8 @@ h2{
 }
 
 .toggle-container{
+  display: flex;
+
   margin-top: 20px;
 }
 
@@ -292,6 +300,7 @@ p{
   
 }
 
+
 .photo-container {
   position: relative;
   display: inline-block;
@@ -303,6 +312,27 @@ p{
   overflow: hidden;
   text-align: center;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), rgba(102, 38, 166, 0.50);
+  
+  margin-right: 10px; /* Adds space to the right of each container */
+  margin-bottom: 10px; /* Adds space below each container */
+}
+
+.photo-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This makes the image cover the available space without distorting its aspect ratio */
+  object-position: center; /* This centers the image within the container */
+}
+
+
+.photo-container button {
+  position: absolute;
+  top: 0; /* Align to the top edge of the container */
+  left: 0; /* Align to the left edge of the container */
+  background: transparent; /* Optional: make the button background transparent */
+  border: none; /* Optional: remove the border */
+  padding: 0; /* Optional: remove padding */
+  cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
 }
 
 .photo-container input {
@@ -328,13 +358,30 @@ p{
   position: relative;
   display: inline-block;
   width: 339px;
-  height: 75px;
+  height: 191px;
   background-color: var(--black-rock-overlay);
   border-radius: 8px;
   border: 2px dashed var(--black-rock-overlay, #2C2849);
   overflow: hidden;
   text-align: center;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), rgba(102, 38, 166, 0.50);
+}
+
+.highlight-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This makes the image cover the available space without distorting its aspect ratio */
+  object-position: center; /* This centers the image within the container */
+}
+
+.highlight-container button {
+  position: absolute;
+  top: 0; /* Align to the top edge of the container */
+  left: 0; /* Align to the left edge of the container */
+  background: transparent; /* Optional: make the button background transparent */
+  border: none; /* Optional: remove the border */
+  padding: 0; /* Optional: remove padding */
+  cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
 }
 
 .highlight-container input {
@@ -355,3 +402,4 @@ p{
   font-size: 40px; /* Adjust size as needed */
   color: var(--white);
 }
+

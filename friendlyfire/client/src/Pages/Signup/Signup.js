@@ -8,9 +8,12 @@ const Signup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  // this is how we'll grab email and password information 
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
+
+  // here's where email will be stored 
   };
 
   const handlePasswordChange = (e) => {
@@ -25,8 +28,7 @@ const Signup = () => {
     e.preventDefault();}
 
     return (
-      <div>
-       
+      <div >
         <div className="logo-container">{/* div for logo */}
           <img src={Logo} alt="friendlyfire app logo" className="logo"/>
         </div>
@@ -71,16 +73,16 @@ const Signup = () => {
           </form>
         </div>
 
-      <div>
-        {/* Or divider div (check figma, may be able to export css from there for this) */}
-        <p className="or">or</p>
-      </div>
-{/* this is the button that will be connecting to google api, just css on button for now */}
-      <button type="submit" className="google"> Sign up with Google</button>
-      <div className="account-question">
-        <p className="question">Already a Member?</p>
-        <a href="github.com/murrmaid4" className="login">Login</a></div>
-    {/* will have this link to login page eventually(in back end phase) */}
+        <div>
+          {/* Or divider div (check figma, may be able to export css from there for this) */}
+          <p className="or">or</p>
+        </div>
+        {/* this is the button that will be connecting to google api, just css on button for now */}
+        <button type="submit" className="google"> Sign up with Google</button>
+         <div className="account-question">
+         <p className="question">Already a Member?</p>
+         <a href="github.com/murrmaid4" className="login">Login</a></div>
+         {/* will have this link to login page eventually(in back end phase) */}
    
 
       </div>

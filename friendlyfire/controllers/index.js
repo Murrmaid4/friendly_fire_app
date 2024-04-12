@@ -24,18 +24,21 @@ app.get('/', (req, res) => {
 })
 // for testing in the browser, if you do npm run start:backend  in controllers folder 
 
-// Sign up to the Database
+// Sign up to the Database - tested and working!!!!!!!!!!!! 
 app.post('/signup', async (req, res) => {
     const client = new MongoClient(uri)
     //this is the variable that holds the mongo npm and database link<< this is typically the first step in every server request
-    const {email, password} = req.body
+    const email = req.body.email;
+    const password = req.body.hashed_password;
 // variable that will hold the email and password entered 
     const generatedUserId = uuidv4()
     // this variable will hold a unique id for users using uuid npm
-    const hashedPassword = await bcrypt.hash(password, 10)
-    // this utilizes the bcrypt npm and hashes the password the user enters (for security!)
+  
 
     try {
+
+        console.log('Received email:', email)
+        console.log('Received password:', password)
         await client.connect()
         // this calls the variable that connects to the database 
         const database = client.db('app-data')
@@ -49,9 +52,13 @@ app.post('/signup', async (req, res) => {
         if (existingUser) {
             return res.status(409).send('User already exists. Please login')
         }
-
+    
         const sanitizedEmail = email.toLowerCase()
-        
+        console.log(sanitizedEmail)
+        console.log("hashing password")
+        const hashedPassword = await bcrypt.hash(password, 10)
+
+        console.log('Password hashed:', hashedPassword)
 
         const data = {
             user_id: generatedUserId,
@@ -153,18 +160,25 @@ app.post('/login', async (req, res) => {
     }
 })
 
-// Get individual user
-app.get('/user', async (req, res) => {
-    const client = new MongoClient(uri)
-    const userId = req.query.userId
+// Get individual user - tested and working 
+app.get('/user/:userId', async (req, res) => {
+    const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+    const userId = req.params.userId;
 
     try {
         await client.connect()
         const database = client.db('app-data')
         const users = database.collection('users')
 
-        const query = {user_id: userId}
-        const user = await users.findOne(query)
+       
+        const user = await users.findOne({ user_id: userId });
+
+
+        if (!user) {
+            return res.status(404).json({ message: "User not found" });
+        }
+
+
         res.send(user)
 
     } finally {
@@ -198,7 +212,7 @@ app.put('/addmatch', async (req, res) => {
 // Update a User in the Database
 app.put('/user', async (req, res) => {
     const client = new MongoClient(uri)
-    const formData = req.body.formData
+    const formData = req.body
 
     try {
         await client.connect()
@@ -210,6 +224,7 @@ app.put('/user', async (req, res) => {
         const updateDocument = {
             $set: {
                 first_name: formData.first_name,
+                last_name: formData.last_name,
                 dob_day: formData.dob_day,
                 dob_month: formData.dob_month,
                 dob_year: formData.dob_year,
@@ -267,6 +282,5 @@ app.post('/message', async (req, res) => {
         await client.close()
     }
 })
-
 
 app.listen(PORT, () => console.log('server running on PORT ' + PORT))
