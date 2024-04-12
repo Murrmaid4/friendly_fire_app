@@ -238,7 +238,7 @@ const RegistrationPage = () => {
                 return {
                     title: "I Identify as:",
                     content: (
-                        <div>
+                        <div className='scrollable-container'>
                             {/* I identify as question with rectangular buttons */}
                             <div>
                                 <div className='identity-button-container'>
@@ -284,15 +284,15 @@ const RegistrationPage = () => {
 
                             {/* Show On Profile Toggle Switch */}
                             <div className="toggle-container">
-                                <label className='profile-question'>Show on Profile</label>
-                                <label className="switch">
-                                    <Toggle
-                                        type="checkbox"
-                                        checked={userData.showOnProfile}
-                                        onChange={() => handleInputChange('showOnProfile', !userData.showOnProfile)}
-                                    />
-                                    <span className="slider"></span>
-                                </label>
+                            <label className="profile-question">Show on Profile</label>
+                            <label className="switch">
+                                <input 
+                                    type="checkbox" 
+                                    checked={userData.showOnProfile} 
+                                    onChange={() => handleInputChange('showOnProfile', !userData.showOnProfile)} 
+                                />
+                                <span className="slider"></span>
+                            </label>
                             </div>
 
                         </div>
@@ -303,10 +303,10 @@ const RegistrationPage = () => {
                     title: "What is Your Ethnicity?",
                     content: (
                         <div>
+                            <div className='selectall-container'>
+                                <p className='ethnicity-question'>Select all that applies to you.</p>
+                            </div>
                             <div>
-                                <div className='selectall-container'>
-                                    <p className='ethnicity-question'>Select all that applies to you.</p>
-                                </div>
                                 <div className='checkbox-container'>
                                     <label>
                                         <input
@@ -396,12 +396,12 @@ const RegistrationPage = () => {
                                         />
                                         White/Caucasian
                                     </label>
-                                </div>
+                                    </div>
                             </div>
 
                             {/* Show On Profile Toggle Switch */}
-                            <div>
-                                <label>Show on Profile:</label>
+                            <div className='toggle-container'>
+                                <label className='profile-question'>Show on Profile</label>
                                 <label className="switch">
                                     <input
                                         type="checkbox"
@@ -420,7 +420,7 @@ const RegistrationPage = () => {
                     content: (
                         <div>
                             <div>
-                                <label className="location-label">Search for your location:</label>
+                                <label className='location-label'>Search for your location:</label>
                                 <input
                                     type="text"
                                     className="step4-input"
@@ -520,8 +520,8 @@ const RegistrationPage = () => {
                             </div>
 
                             {/* Show On Profile Toggle Switch */}
-                            <div className="toggle-switch">
-                                <label>Show on Profile:</label>
+                            <div className="toggle-container">
+                                <label className='profile-question'>Show on Profile</label>
                                 <label className="switch">
                                     <input
                                         type="checkbox"
@@ -636,6 +636,7 @@ const RegistrationPage = () => {
                                 </label>
                             </div>
                         </div>
+
                     ),
                 };
 
