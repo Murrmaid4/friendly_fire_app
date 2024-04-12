@@ -11,6 +11,9 @@ import Registration from "./Pages/Registration/Registration";
 import Matches from "./Pages/Matches/Matches";
 import Settings from "./Pages/Settings/Settings";
 import Messages from "./Pages/Messages/Messages";
+import Login from "./Pages/Login/Login";
+
+
 import Footer from "./Components/Footer/Footer";
 
 function App() {
@@ -28,12 +31,15 @@ function AppContent() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Signup />} />
-        <Route path="/account" element={<Account />} />
-        <Route path="/signup" element={<Registration />} />
-        <Route path="/matches" element={<Matches />} />
-        <Route path="/settings" element={<Settings />} />
-        <Route path="/messages" element={<Messages />} />
+
+        <Route path="/" element={<Signup/> }/> 
+        <Route path="/login" element={<Login/> }/> 
+        <Route path="/account" element={<Account/> }/> 
+        <Route path="/signup" element={<Registration/> }/>
+        <Route path="/matches" element={<Matches/> }/> 
+        <Route path="/settings" element={<Settings/> }/> 
+        <Route path="/messages" element={<Messages/> }/>
+
       </Routes>
       {showFooter && <Footer />}
     </>
