@@ -12,7 +12,7 @@ const Footer = () => {
   return (
     // Needs routing
     <nav className="bottom-nav">
-      <NavLink to="/profile" activeClassName="active">
+      <NavLink to="/account" activeClassName="active">
         <FaUser />
         <span>Profile</span>
       </NavLink>
