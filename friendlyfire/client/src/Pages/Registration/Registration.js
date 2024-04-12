@@ -207,7 +207,7 @@ const RegistrationPage = () => {
                 return {
                     title: "",
                     content: (
-                        <div>
+                        <div className='name-body'>
                             {/* ... Previous questions ... */}
                             {/* What is your preferred name text input */}
                             <div>
@@ -241,7 +241,7 @@ const RegistrationPage = () => {
                         <div>
                             {/* I identify as question with rectangular buttons */}
                             <div>
-                                <div className='button-container'>
+                                <div className='identity-button-container'>
                                     <button onClick={() => handleInputChange('genderIdentity', 'Woman')} className='identity-button'>
                                         Woman
                                     </button>

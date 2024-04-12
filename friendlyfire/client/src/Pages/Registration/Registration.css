@@ -1,4 +1,4 @@
-body {
+/* body {
   background: var(--black);
   display:flex;
   justify-content: center;
@@ -6,8 +6,7 @@ body {
   padding: 10px;
   margin-left: 20px !important;
   margin-right: 20px !important;
-
-}
+} */
 
 h1{
   color: var(--white);
@@ -43,7 +42,7 @@ h2{
   font-style: normal;
   font-weight: 400;
   line-height: 120%;
-  width: 353px;
+  width: 100%;
   height: 40px;
   justify-content: center;
   align-items: center;
@@ -53,7 +52,6 @@ h2{
   background: none;
   margin-top: 20px;
   margin-bottom: 52px;
-  padding-left: 10px;
 }
 
 .step1-input::placeholder{
@@ -62,6 +60,7 @@ h2{
   font-style: normal;
   font-weight: 400;
   line-height: 120%; /* 18px */
+  padding-left: 10px;
 }
 
 
@@ -116,50 +115,76 @@ h2{
 
 }
 
+/*base styles for both buttons*/
+.next-button, .previous-button {
+  width: 353px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  color: var(--white);
+  text-align: center;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; 
+  letter-spacing: 1.575px;
+  text-transform: uppercase;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .next-button {
-  width: 353px;
-  height: 48px;
-  flex-shrink: 0;
-  border-radius: 12px;
-  border: 1px solid var(--darBlue);
+  border: 1px solid var(--darBlue); 
   background: var(--darBlue);
-  color: var(--white);
-  text-align: center;
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 120%; /* 18px */
-  letter-spacing: 1.575px;
-  text-transform: uppercase;
-  position: absolute;
   bottom: 25px;
-  left: 50%;
-  transform: translateX(-50%)
 }
 
-.previous-button{
-  width: 353px;
-  height: 48px;
-  flex-shrink: 0;
-  border-radius: 12px;
+.previous-button {
   border: 1px solid var(--black-rock-overlay);
-  background:  var(--black-rock-overlay);
-  color: var(--white);
-  text-align: center;
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 120%; /* 18px */
-  letter-spacing: 1.575px;
-  text-transform: uppercase;
-  box-shadow: none;
-  position: absolute;
+  background: var(--black-rock-overlay);
   bottom: 80px;
-  left: 50%;
-  transform: translateX(-50%)
 }
 
-.button-container{
+/*responsive next and previous buttons*/
+@media only screen and (max-width: 600px) {
+  .next-button, .previous-button {
+    width: calc(100% - 40px); /* Keeps 20px margin on each side */
+  }
+  .next-button {
+    bottom: 25px;
+  }
+  .previous-button {
+    bottom: 80px;
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  .next-button, .previous-button {
+    width: calc(100% - 80px); /* Adjusts to new body margin of 40px each side */
+  }
+  .next-button {
+    bottom: 25px;
+  }
+  .previous-button {
+    bottom: 80px;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .next-button, .previous-button {
+    width: calc(100% - 200px); /* Adjusts to new body margin of 100px each side */
+  }
+  .next-button {
+    bottom: 25px;
+  }
+  .previous-button {
+    bottom: 80px;
+  }
+}
+
+
+.identity-button-container{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -167,7 +192,7 @@ h2{
 }
 
 .identity-button, .identity-more-button{
-  width: 351px;
+  width: 100%;
   height: 66px;
   display: flex;
   flex-direction: column;
