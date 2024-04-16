@@ -282,6 +282,7 @@ input:checked + .slider:before {
   color: var(--white);
   line-height: normal;
   width: 300px;
+  transition: color 0.3s;
 }
 
 .checkbox-container input[type="checkbox"] {
@@ -297,7 +298,12 @@ input:checked + .slider:before {
   background-color: var(--black-rock-overlay);
   position: absolute;
   right: 22px;
+  transition: background-color 0.3s;
 }
+.checkbox-container input[type="checkbox"]:checked {
+  background-color: var(--pink); /* Change to a highlight color when checked */
+}
+
 
 p{
   color: var(--white);

@@ -28,7 +28,7 @@ const Login = () => {
   };
 
   return (
-    <div style={{ backgroundImage: `url(${background})`, backgroundRepeat: "repeat", width: '100%'}}>
+    <div className="login-body">
       <div className="logo-container">
         {/* div for logo */}
         <img src={Logo} alt="friendlyfire app logo" className="logo" />

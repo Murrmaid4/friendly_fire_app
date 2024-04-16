@@ -17,15 +17,15 @@ code {
 
 @media only screen and (min-width: 601px) {
   body {
-    /* Adjust styles as needed for tablet view */
-    margin: 0 40px; /* Example: increase margin for more space */
+    /* tablet view */
+    margin: 0 40px; 
   }
 }
 
 /* Large screens (desktops) */
 @media only screen and (min-width: 1025px) {
   body {
-    /* Adjust styles as needed for desktop view */
-    margin: 0 100px; /* Example: further increase margin for larger screens */
+    /* desktop view */
+    margin: 0 100px; 
   }
 }
