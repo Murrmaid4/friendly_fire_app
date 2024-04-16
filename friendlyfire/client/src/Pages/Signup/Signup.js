@@ -16,7 +16,9 @@ const Signup = () => {
     e.preventDefault();
     console.log("Clicked!")
     try {
-      const response = await axios.post('http://localhost:8000/signup', { email, password });
+      const response = await axios.post('http://localhost:8000/signup', { 
+        email:email, 
+        hashed_password: password });
       console.log(response.data); // Assuming response contains token and userId
       // Handle successful signup, e.g., redirect to dashboard
     } catch (error) {
@@ -33,7 +35,7 @@ const Signup = () => {
         <h1 className="signup">Sign Up</h1>
         
         <div>
-          <form onSubmit={handleSubmit}>
+          <form action="/signup" method="post" encType="multipart/form-data" onSubmit={handleSubmit}>
             <label>
               Email:
               <input
@@ -51,6 +53,7 @@ const Signup = () => {
               <input
                 type="password"
                 placeholder="Enter Password"
+                name="hashed_password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
