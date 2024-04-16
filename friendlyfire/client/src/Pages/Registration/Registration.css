@@ -300,8 +300,30 @@ input:checked + .slider:before {
   right: 22px;
   transition: background-color 0.3s;
 }
+.checkbox-container input[type="checkbox"]::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 1px;
+  width: 5px;
+  height: 9px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s;
+}
+
+.checkbox-container input[type="checkbox"]:checked::before {
+  opacity: 1; /* Show the checkmark when checked */
+}
+
 .checkbox-container input[type="checkbox"]:checked {
-  background-color: var(--pink); /* Change to a highlight color when checked */
+  background-color: var(--pink); /* Change background color when checked */
+}
+
+.checkbox-container input[type="checkbox"]:checked + label {
+  color: var(--pink); /* Change label color when checkbox is checked */
 }
 
 
