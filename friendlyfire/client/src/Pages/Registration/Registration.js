@@ -302,10 +302,11 @@ const RegistrationPage = () => {
                 return {
                     title: "What is Your Ethnicity?",
                     content: (
-                        <div>
+                        <div className='scrollable-container'>
                             <div className='selectall-container'>
                                 <p className='ethnicity-question'>Select all that applies to you.</p>
                             </div>
+                        <div>
                             <div>
                                 <div className='checkbox-container'>
                                     <label>
@@ -411,6 +412,7 @@ const RegistrationPage = () => {
                                     <span className="slider"></span>
                                 </label>
                             </div>
+                        </div>
                         </div>
                     ),
                 };

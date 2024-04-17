@@ -267,21 +267,27 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 
+.page-container {
+  position: relative; /* Or 'absolute' based on your layout */
+  overflow: visible;
+}
 
-.checkbox-container{
+.checkbox-container {
   display: flex;
   align-items: center;
   margin-bottom: 25px;
-  flex-direction: row;
+  justify-content: space-between; /* This ensures items are on opposite sides */
+  position: relative;
+  padding-right: 40px; /* Ensures space for the checkbox */
 }
 
-.checkbox-container label{
+.checkbox-container label {
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
   color: var(--white);
   line-height: normal;
-  width: 300px;
+  width: calc(100% - 40px); /* Adjust width to make space for checkbox */
 }
 
 .checkbox-container input[type="checkbox"] {
@@ -292,12 +298,38 @@ input:checked + .slider:before {
   height: 17px;
   border: 1px solid #333;
   border-radius: 4px;
-  margin-left: 10px;
   cursor: pointer;
   background-color: var(--black-rock-overlay);
   position: absolute;
-  right: 22px;
+  right: 0;
 }
+
+.checkbox-container input[type="checkbox"]::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 1px;
+  width: 5px;
+  height: 9px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s;
+}
+
+.checkbox-container input[type="checkbox"]:checked::before {
+  opacity: 1; /* Show the checkmark when checked */
+}
+
+.checkbox-container input[type="checkbox"]:checked {
+  background-color: var(--pink); /* Change background color when checked */
+}
+
+.checkbox-container input[type="checkbox"]:checked + label {
+  color: var(--pink); /* Change label color when checkbox is checked */
+}
+
 
 p{
   color: var(--white);
