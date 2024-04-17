@@ -302,11 +302,11 @@ const RegistrationPage = () => {
                 return {
                     title: "What is Your Ethnicity?",
                     content: (
-                        <div className="scrollable-container">
+                        <div className='scrollable-container'>
                             <div className='selectall-container'>
                                 <p className='ethnicity-question'>Select all that applies to you.</p>
                             </div>
-                        <div style={{ maxHeight: '300px', overflowY: 'auto' }}>
+                        <div>
                             <div>
                                 <div className='checkbox-container'>
                                     <label>
