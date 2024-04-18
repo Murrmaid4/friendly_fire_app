@@ -5,19 +5,19 @@ const { v4: uuidv4 } = require("uuid");
 const jwt = require("jsonwebtoken");
 const cors = require("cors");
 const bcrypt = require("bcrypt");
-// require('dotenv').config()
-// process.env.URI
+require('dotenv').config()
+
 
 // this brings the modules into this page to be used
 
-const uri =
-  "mongodb+srv://pritchettb14:friendlyfire@cluster0.bzxi0yi.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const uri =process.env.URI;
 // this connects to our database in atlas
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 //connects to express node module
+
 
 // Default
 app.get("/", (req, res) => {
